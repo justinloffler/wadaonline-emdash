@@ -1,0 +1,19 @@
+---
+import { getEmDashCollection, getEmDashEntry } from 'emdash';
+import WadaLayout from '../layouts/WadaLayout.astro';
+import TeamCard from '../components/wada/TeamCard.astro';
+const result = await getEmDashCollection('teams', { status: 'published', orderBy: { name: 'asc' }, limit: 50, cursor: Astro.url.searchParams.get('cursor') ?? undefined });
+if (result.error) throw result.error;
+if (Astro.cache?.enabled) Astro.cache.set(result.cacheHint);
+const teams = await Promise.all(result.entries.map(async team => {
+  const detail = await getEmDashEntry('teams', team.id, { references: { venue: true } });
+  if (detail.error) throw detail.error;
+  if (Astro.cache?.enabled) Astro.cache.set(detail.cacheHint);
+  return detail.entry;
+}));
+---
+<WadaLayout title="Teams">
+  <header class="wada-heading"><p class="wada-kicker">Find your team</p><h1>Teams</h1></header>
+  <div class="wada-grid wada-section">{teams.map(team => team && <TeamCard name={team.data.name} venue={team.references?.venue.entries[0]?.data} venueNote={team.data.venue_note} captain={team.data.captain} />)}</div>
+  {result.nextCursor && <a href={`?cursor=${encodeURIComponent(result.nextCursor)}`}>More teams →</a>}
+</WadaLayout>

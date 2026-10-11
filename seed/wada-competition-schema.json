@@ -1,0 +1,1519 @@
+{
+  "version": "1",
+  "collections": [
+    {
+      "slug": "divisions",
+      "label": "Divisions",
+      "labelSingular": "Division",
+      "group": "League",
+      "sortOrder": 0,
+      "titleField": "name",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "short",
+          "label": "Short name",
+          "type": "string"
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "games_per_match",
+          "label": "Games per match",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 1
+          }
+        },
+        {
+          "slug": "champion_shield",
+          "label": "Championship shield",
+          "type": "string"
+        },
+        {
+          "slug": "premier_shield",
+          "label": "Premiership shield",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "slug": "seasons",
+      "label": "Seasons",
+      "labelSingular": "Season",
+      "group": "League",
+      "sortOrder": 1,
+      "titleField": "name",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "start",
+          "label": "Start date (YYYY-MM-DD)",
+          "type": "string",
+          "required": true,
+          "validation": {
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          }
+        },
+        {
+          "slug": "end",
+          "label": "End date (YYYY-MM-DD)",
+          "type": "string",
+          "required": true,
+          "validation": {
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          }
+        },
+        {
+          "slug": "season_status",
+          "label": "Season status",
+          "type": "select",
+          "required": true,
+          "validation": {
+            "options": [
+              "upcoming",
+              "current",
+              "complete"
+            ]
+          }
+        },
+        {
+          "slug": "total_rounds",
+          "label": "Total rounds",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 1
+          }
+        },
+        {
+          "slug": "events",
+          "label": "Calendar events",
+          "type": "repeater",
+          "validation": {
+            "subFields": [
+              {
+                "slug": "date",
+                "label": "Date (YYYY-MM-DD)",
+                "type": "string"
+              },
+              {
+                "slug": "title",
+                "label": "Title",
+                "type": "string",
+                "required": true
+              },
+              {
+                "slug": "kind",
+                "label": "Event kind",
+                "type": "select",
+                "options": [
+                  "event",
+                  "finals",
+                  "grand-final",
+                  "presentation"
+                ]
+              },
+              {
+                "slug": "note",
+                "label": "Note",
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "season_divisions",
+      "label": "Season team lists",
+      "labelSingular": "Season team list",
+      "group": "League",
+      "sortOrder": 2,
+      "titleField": "title",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "season",
+          "label": "Season",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "seasons",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "division",
+          "label": "Division",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "divisions",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "teams",
+          "label": "Teams in this division",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "teams",
+            "multiple": true
+          }
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        }
+      ]
+    },
+    {
+      "slug": "league_settings",
+      "label": "League rules",
+      "labelSingular": "League rules",
+      "group": "League",
+      "sortOrder": 3,
+      "titleField": "title",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "current_season",
+          "label": "Current season",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "seasons",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "points_for_win",
+          "label": "Points for a win",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "points_for_draw",
+          "label": "Points for a draw",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "min_games_for_average",
+          "label": "Minimum games for average",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "established",
+          "label": "Association established (YYYY-MM-DD)",
+          "type": "string",
+          "required": true,
+          "validation": {
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fixtures",
+      "label": "Fixtures",
+      "labelSingular": "Fixture",
+      "group": "League",
+      "sortOrder": 4,
+      "titleField": "title",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "season",
+          "label": "Season",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "seasons",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "division",
+          "label": "Division",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "divisions",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "round",
+          "label": "Round",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 1
+          }
+        },
+        {
+          "slug": "date",
+          "label": "Match date (YYYY-MM-DD)",
+          "type": "string",
+          "required": true,
+          "validation": {
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          }
+        },
+        {
+          "slug": "home",
+          "label": "Home team",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "teams",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "away",
+          "label": "Away team",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "teams",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        }
+      ]
+    },
+    {
+      "slug": "results",
+      "label": "Match results",
+      "labelSingular": "Match result",
+      "group": "League",
+      "sortOrder": 5,
+      "titleField": "title",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "season",
+          "label": "Season",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "seasons",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "division",
+          "label": "Division",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "divisions",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "round",
+          "label": "Round",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 1
+          }
+        },
+        {
+          "slug": "date",
+          "label": "Match date (YYYY-MM-DD)",
+          "type": "string",
+          "required": true,
+          "validation": {
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          }
+        },
+        {
+          "slug": "home",
+          "label": "Home team",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "teams",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "away",
+          "label": "Away team",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "teams",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "home_score",
+          "label": "Home score",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "away_score",
+          "label": "Away score",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "forfeit",
+          "label": "Team that forfeited (opponent wins)",
+          "type": "select",
+          "required": false,
+          "validation": {
+            "options": [
+              "home",
+              "away"
+            ]
+          }
+        },
+        {
+          "slug": "note",
+          "label": "Note",
+          "type": "text"
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        }
+      ]
+    },
+    {
+      "slug": "ladders",
+      "label": "Official ladder snapshots",
+      "labelSingular": "Ladder snapshot",
+      "group": "League",
+      "sortOrder": 6,
+      "titleField": "title",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "season",
+          "label": "Season",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "seasons",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "division",
+          "label": "Division",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "divisions",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "round",
+          "label": "As at round",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 1
+          }
+        },
+        {
+          "slug": "source",
+          "label": "Source / reason for correction",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "slug": "ladder_rows",
+      "label": "Ladder standings",
+      "labelSingular": "Ladder standing",
+      "group": "League",
+      "sortOrder": 7,
+      "titleField": "title",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "snapshot",
+          "label": "Official ladder snapshot",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "ladders",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "team",
+          "label": "Team",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "teams",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "played",
+          "label": "Played",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "won",
+          "label": "Won",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "points",
+          "label": "Points",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "legs_for",
+          "label": "Legs for",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "legs_against",
+          "label": "Legs against",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        }
+      ]
+    },
+    {
+      "slug": "players",
+      "label": "Players",
+      "labelSingular": "Player",
+      "titleField": "name",
+      "group": "WADA",
+      "sortOrder": 2,
+      "routable": false,
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Full name",
+          "type": "string",
+          "required": true,
+          "searchable": true,
+          "indexed": true
+        },
+        {
+          "slug": "registration",
+          "label": "Registration number / code",
+          "type": "string",
+          "searchable": true,
+          "indexed": true
+        },
+        {
+          "slug": "registration_review",
+          "label": "Registration review",
+          "type": "select",
+          "validation": {
+            "options": [
+              "As published",
+              "OCC / unnumbered",
+              "Duplicate number — review"
+            ]
+          }
+        },
+        {
+          "slug": "aliases",
+          "label": "Other names",
+          "type": "repeater",
+          "validation": {
+            "subFields": [
+              {
+                "slug": "name",
+                "label": "Name",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        },
+        {
+          "slug": "notes",
+          "label": "Player notes",
+          "type": "text"
+        },
+        {
+          "slug": "averages",
+          "label": "Player averages",
+          "type": "reference",
+          "validation": {
+            "relation": "player_averages"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "stats",
+      "label": "Player averages",
+      "labelSingular": "Player average",
+      "group": "League",
+      "sortOrder": 8,
+      "titleField": "name",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name as published",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "player",
+          "label": "Player",
+          "type": "reference",
+          "required": false,
+          "validation": {
+            "relation": "player_averages"
+          }
+        },
+        {
+          "slug": "season",
+          "label": "Season",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "seasons",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "division",
+          "label": "Division",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "divisions",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "round",
+          "label": "As at round",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 1
+          }
+        },
+        {
+          "slug": "team",
+          "label": "Team",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "teams",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "registration",
+          "label": "Registration as published",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "games",
+          "label": "Games",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "score",
+          "label": "Total score",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "darts",
+          "label": "Total darts",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "high_out",
+          "label": "Highest checkout",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0,
+            "max": 170
+          }
+        },
+        {
+          "slug": "tons_180",
+          "label": "180s this season",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "annual_180",
+          "label": "180s this year",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "lifetime_180",
+          "label": "Lifetime 180s",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        }
+      ]
+    },
+    {
+      "slug": "honours",
+      "label": "Season honours",
+      "labelSingular": "Season honours",
+      "group": "History",
+      "sortOrder": 9,
+      "titleField": "title",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "note",
+          "label": "Note",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "slug": "honour_awards",
+      "label": "Shield awards",
+      "labelSingular": "Shield award",
+      "group": "History",
+      "sortOrder": 10,
+      "titleField": "title",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "honours",
+          "label": "Season honours",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "honours",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "division",
+          "label": "Historic division name",
+          "type": "string"
+        },
+        {
+          "slug": "shield",
+          "label": "Shield",
+          "type": "string"
+        },
+        {
+          "slug": "winner",
+          "label": "Winner",
+          "type": "string"
+        },
+        {
+          "slug": "second",
+          "label": "Runner-up",
+          "type": "string"
+        },
+        {
+          "slug": "roster",
+          "label": "Winning roster",
+          "type": "repeater",
+          "validation": {
+            "subFields": [
+              {
+                "slug": "name",
+                "label": "Winning roster",
+                "type": "text",
+                "required": true
+              }
+            ]
+          }
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        }
+      ]
+    },
+    {
+      "slug": "competitions",
+      "label": "Cup competitions",
+      "labelSingular": "Cup competition",
+      "group": "History",
+      "sortOrder": 11,
+      "titleField": "name",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "summary",
+          "label": "Summary",
+          "type": "text"
+        },
+        {
+          "slug": "intro_title",
+          "label": "Introduction heading",
+          "type": "string"
+        },
+        {
+          "slug": "intro",
+          "label": "History / tribute",
+          "type": "portableText"
+        },
+        {
+          "slug": "memorial",
+          "label": "Memorial",
+          "type": "reference",
+          "required": false,
+          "validation": {
+            "targetCollection": "memorials",
+            "multiple": false
+          }
+        }
+      ]
+    },
+    {
+      "slug": "competition_events",
+      "label": "Cup event history",
+      "labelSingular": "Cup event",
+      "group": "History",
+      "sortOrder": 12,
+      "titleField": "title",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "competition",
+          "label": "Competition",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "competitions",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "year",
+          "label": "Year",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 1900
+          }
+        },
+        {
+          "slug": "date",
+          "label": "Event date (YYYY-MM-DD)",
+          "type": "string",
+          "required": false,
+          "validation": {
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          }
+        },
+        {
+          "slug": "date_note",
+          "label": "Date as published",
+          "type": "string"
+        },
+        {
+          "slug": "venue",
+          "label": "Venue as published",
+          "type": "string"
+        },
+        {
+          "slug": "players",
+          "label": "Number of players",
+          "type": "integer",
+          "validation": {
+            "min": 0
+          }
+        },
+        {
+          "slug": "cancelled",
+          "label": "Cancelled",
+          "type": "boolean"
+        },
+        {
+          "slug": "report",
+          "label": "Published report",
+          "type": "portableText"
+        },
+        {
+          "slug": "highlights",
+          "label": "Awards and highlights",
+          "type": "repeater",
+          "validation": {
+            "subFields": [
+              {
+                "slug": "label",
+                "label": "Award",
+                "type": "string"
+              },
+              {
+                "slug": "value",
+                "label": "Recipient / result",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "notes",
+          "label": "Notes",
+          "type": "repeater",
+          "validation": {
+            "subFields": [
+              {
+                "slug": "text",
+                "label": "Notes",
+                "type": "text",
+                "required": true
+              }
+            ]
+          }
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        }
+      ]
+    },
+    {
+      "slug": "competition_results",
+      "label": "Cup event results",
+      "labelSingular": "Cup event result",
+      "group": "History",
+      "sortOrder": 13,
+      "titleField": "title",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "event",
+          "label": "Cup event",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "competition_events",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "label",
+          "label": "Division / group / round",
+          "type": "string"
+        },
+        {
+          "slug": "winner",
+          "label": "Winner",
+          "type": "string"
+        },
+        {
+          "slug": "runners_up",
+          "label": "Runners-up",
+          "type": "repeater",
+          "validation": {
+            "subFields": [
+              {
+                "slug": "name",
+                "label": "Runners-up",
+                "type": "text",
+                "required": true
+              }
+            ]
+          }
+        },
+        {
+          "slug": "score",
+          "label": "Score as published",
+          "type": "string"
+        },
+        {
+          "slug": "details",
+          "label": "Details",
+          "type": "repeater",
+          "validation": {
+            "subFields": [
+              {
+                "slug": "text",
+                "label": "Details",
+                "type": "text",
+                "required": true
+              }
+            ]
+          }
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        }
+      ]
+    },
+    {
+      "slug": "competition_teams",
+      "label": "Cup event rosters",
+      "labelSingular": "Cup event roster",
+      "group": "History",
+      "sortOrder": 14,
+      "titleField": "name",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "event",
+          "label": "Cup event",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "competition_events",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "label",
+          "label": "Role / placing",
+          "type": "string"
+        },
+        {
+          "slug": "players",
+          "label": "Players",
+          "type": "repeater",
+          "validation": {
+            "subFields": [
+              {
+                "slug": "name",
+                "label": "Players",
+                "type": "text",
+                "required": true
+              }
+            ]
+          }
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        }
+      ]
+    },
+    {
+      "slug": "competition_photos",
+      "label": "Cup photos and draw sheets",
+      "labelSingular": "Cup photo",
+      "group": "History",
+      "sortOrder": 15,
+      "titleField": "title",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "competition",
+          "label": "Competition",
+          "type": "reference",
+          "required": true,
+          "validation": {
+            "targetCollection": "competitions",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "event",
+          "label": "Cup event (blank for introductory photos)",
+          "type": "reference",
+          "required": false,
+          "validation": {
+            "targetCollection": "competition_events",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "image",
+          "label": "Media library image",
+          "type": "image"
+        },
+        {
+          "slug": "alt",
+          "label": "Alternative text",
+          "type": "text",
+          "required": true
+        },
+        {
+          "slug": "caption",
+          "label": "Caption",
+          "type": "text"
+        },
+        {
+          "slug": "kind",
+          "label": "Image kind",
+          "type": "select",
+          "required": true,
+          "validation": {
+            "options": [
+              "photo",
+              "draw"
+            ]
+          }
+        },
+        {
+          "slug": "source_path",
+          "label": "Original source asset path",
+          "type": "string"
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "required": true,
+          "validation": {
+            "min": 0
+          }
+        }
+      ]
+    },
+    {
+      "slug": "association_records",
+      "label": "Association records",
+      "labelSingular": "Association record",
+      "group": "History",
+      "sortOrder": 16,
+      "titleField": "title",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "as_at",
+          "label": "As at",
+          "type": "string"
+        },
+        {
+          "slug": "top_all_time",
+          "label": "All-time leaders",
+          "type": "repeater",
+          "validation": {
+            "subFields": [
+              {
+                "slug": "name",
+                "label": "All-time leaders",
+                "type": "text",
+                "required": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "slug": "checkouts",
+      "label": "Checkout charts",
+      "labelSingular": "Checkout chart",
+      "group": "Resources",
+      "sortOrder": 17,
+      "titleField": "title",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "note",
+          "label": "Source / verification note",
+          "type": "text"
+        },
+        {
+          "slug": "verified",
+          "label": "Verified by WADA",
+          "type": "boolean"
+        },
+        {
+          "slug": "rows",
+          "label": "Checkout routes",
+          "type": "repeater",
+          "validation": {
+            "subFields": [
+              {
+                "slug": "score",
+                "label": "Score",
+                "type": "integer",
+                "required": true
+              },
+              {
+                "slug": "route",
+                "label": "Dart sequence",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "slug": "player_averages",
+      "parentCollection": "stats",
+      "childCollection": "players",
+      "parentLabel": "Player averages",
+      "parentLabelSingular": "Player average",
+      "childLabel": "Players",
+      "childLabelSingular": "Player",
+      "maxChildrenPerParent": 1
+    }
+  ]
+}

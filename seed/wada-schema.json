@@ -1,0 +1,419 @@
+{
+  "version": "1",
+  "collections": [
+    {
+      "slug": "venues",
+      "label": "Venues",
+      "labelSingular": "Venue",
+      "titleField": "name",
+      "group": "WADA",
+      "sortOrder": 0,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true,
+          "indexed": true
+        },
+        {
+          "slug": "address",
+          "label": "Street address",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "phone",
+          "label": "Public venue phone",
+          "type": "string"
+        }
+      ],
+      "commentsEnabled": false,
+      "urlPattern": "/venues/"
+    },
+    {
+      "slug": "teams",
+      "label": "Teams",
+      "labelSingular": "Team",
+      "titleField": "name",
+      "group": "WADA",
+      "sortOrder": 1,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true,
+          "indexed": true
+        },
+        {
+          "slug": "venue",
+          "label": "Home venue",
+          "type": "reference",
+          "validation": {
+            "targetCollection": "venues",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "venue_note",
+          "label": "Venue note",
+          "type": "string"
+        },
+        {
+          "slug": "captain",
+          "label": "Captain name",
+          "type": "string"
+        },
+        {
+          "slug": "aliases",
+          "label": "Other team names",
+          "type": "repeater",
+          "validation": {
+            "subFields": [
+              {
+                "slug": "name",
+                "label": "Name",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        }
+      ],
+      "commentsEnabled": false,
+      "urlPattern": "/teams/"
+    },
+    {
+      "slug": "committee",
+      "label": "Committee",
+      "labelSingular": "Committee member",
+      "titleField": "name",
+      "group": "WADA",
+      "sortOrder": 2,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true,
+          "indexed": true
+        },
+        {
+          "slug": "role",
+          "label": "Role",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "term",
+          "label": "Term",
+          "type": "string"
+        },
+        {
+          "slug": "photo",
+          "label": "Portrait",
+          "type": "image"
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "defaultValue": 100,
+          "indexed": true
+        }
+      ],
+      "commentsEnabled": false,
+      "urlPattern": "/about/"
+    },
+    {
+      "slug": "sponsors",
+      "label": "Sponsors",
+      "labelSingular": "Sponsor",
+      "titleField": "name",
+      "group": "WADA",
+      "sortOrder": 3,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true,
+          "indexed": true
+        },
+        {
+          "slug": "tier",
+          "label": "Sponsorship tier",
+          "type": "select",
+          "required": true,
+          "validation": {
+            "options": [
+              "major",
+              "sponsor"
+            ]
+          }
+        },
+        {
+          "slug": "category",
+          "label": "Business category",
+          "type": "string"
+        },
+        {
+          "slug": "address",
+          "label": "Business address",
+          "type": "string"
+        },
+        {
+          "slug": "phone",
+          "label": "Public business phone",
+          "type": "string"
+        },
+        {
+          "slug": "url",
+          "label": "Website",
+          "type": "url"
+        },
+        {
+          "slug": "logo",
+          "label": "Logo",
+          "type": "image"
+        },
+        {
+          "slug": "content",
+          "label": "About the sponsor",
+          "type": "portableText"
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "defaultValue": 100,
+          "indexed": true
+        }
+      ],
+      "commentsEnabled": false,
+      "urlPattern": "/sponsors/"
+    },
+    {
+      "slug": "documents",
+      "label": "Documents",
+      "labelSingular": "Document",
+      "titleField": "title",
+      "group": "WADA",
+      "sortOrder": 4,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search"
+      ],
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "category",
+          "label": "Category",
+          "type": "select",
+          "required": true,
+          "validation": {
+            "options": [
+              "Rules",
+              "Governance",
+              "Policies",
+              "Results archive"
+            ]
+          }
+        },
+        {
+          "slug": "description",
+          "label": "Description",
+          "type": "text"
+        },
+        {
+          "slug": "file",
+          "label": "Uploaded document",
+          "type": "file",
+          "validation": {
+            "allowedMimeTypes": [
+              "application/pdf"
+            ]
+          }
+        },
+        {
+          "slug": "url",
+          "label": "Original document link",
+          "type": "url"
+        },
+        {
+          "slug": "featured",
+          "label": "Featured",
+          "type": "boolean",
+          "defaultValue": false
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "defaultValue": 100,
+          "indexed": true
+        }
+      ],
+      "commentsEnabled": false,
+      "urlPattern": "/documents/"
+    },
+    {
+      "slug": "memorials",
+      "label": "In memory",
+      "labelSingular": "Memorial",
+      "titleField": "name",
+      "group": "WADA",
+      "sortOrder": 5,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true,
+          "indexed": true
+        },
+        {
+          "slug": "died",
+          "label": "Date of passing (YYYY-MM-DD)",
+          "type": "string",
+          "validation": {
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          }
+        },
+        {
+          "slug": "tribute",
+          "label": "Tribute",
+          "type": "portableText"
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "defaultValue": 100,
+          "indexed": true
+        }
+      ],
+      "commentsEnabled": false,
+      "urlPattern": "/about/#in-memory"
+    },
+    {
+      "slug": "site_profile",
+      "label": "WADA site details",
+      "labelSingular": "Site details",
+      "titleField": "title",
+      "group": "WADA",
+      "sortOrder": 6,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search"
+      ],
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Association name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "short_name",
+          "label": "Short name",
+          "type": "string"
+        },
+        {
+          "slug": "headline",
+          "label": "Home headline",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "tagline",
+          "label": "Home introduction",
+          "type": "string"
+        },
+        {
+          "slug": "content",
+          "label": "Association history",
+          "type": "portableText"
+        },
+        {
+          "slug": "email",
+          "label": "Public association email",
+          "type": "string"
+        },
+        {
+          "slug": "facebook",
+          "label": "Facebook",
+          "type": "url"
+        },
+        {
+          "slug": "home_ground",
+          "label": "Home ground",
+          "type": "string"
+        },
+        {
+          "slug": "home_address",
+          "label": "Home ground address",
+          "type": "string"
+        },
+        {
+          "slug": "results_due",
+          "label": "Results deadline",
+          "type": "text"
+        },
+        {
+          "slug": "eligibility_notice",
+          "label": "Captains notice",
+          "type": "text"
+        }
+      ],
+      "commentsEnabled": false,
+      "urlPattern": "/"
+    }
+  ]
+}

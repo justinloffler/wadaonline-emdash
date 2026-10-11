@@ -1,0 +1,2700 @@
+{
+  "version": "1",
+  "relations": [
+    {
+      "slug": "player_averages",
+      "parentCollection": "stats",
+      "childCollection": "players",
+      "parentLabel": "Player averages",
+      "parentLabelSingular": "Player average",
+      "childLabel": "Players",
+      "childLabelSingular": "Player",
+      "maxChildrenPerParent": 1
+    }
+  ],
+  "collections": [
+    {
+      "slug": "players",
+      "label": "Players",
+      "labelSingular": "Player",
+      "titleField": "name",
+      "group": "WADA",
+      "sortOrder": 2,
+      "routable": false,
+      "supports": [
+        "drafts",
+        "revisions",
+        "search"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Full name",
+          "type": "string",
+          "required": true,
+          "searchable": true,
+          "indexed": true
+        },
+        {
+          "slug": "registration",
+          "label": "Registration number / code",
+          "type": "string",
+          "searchable": true,
+          "indexed": true
+        },
+        {
+          "slug": "registration_review",
+          "label": "Registration review",
+          "type": "select",
+          "validation": {
+            "options": [
+              "As published",
+              "OCC / unnumbered",
+              "Duplicate number — review"
+            ]
+          }
+        },
+        {
+          "slug": "aliases",
+          "label": "Other names",
+          "type": "repeater",
+          "validation": {
+            "subFields": [
+              {
+                "slug": "name",
+                "label": "Name",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        },
+        {
+          "slug": "notes",
+          "label": "Player notes",
+          "type": "text"
+        },
+        {
+          "slug": "averages",
+          "label": "Player averages",
+          "type": "reference",
+          "validation": {
+            "relation": "player_averages"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "stats",
+      "label": "Player averages",
+      "fields": [
+        {
+          "slug": "player",
+          "label": "Player",
+          "type": "reference",
+          "required": false,
+          "validation": {
+            "relation": "player_averages"
+          }
+        }
+      ]
+    }
+  ],
+  "content": {
+    "players": [
+      {
+        "id": "players:aaron-halliday-e0903231401c",
+        "slug": "aaron-halliday-e0903231401c",
+        "status": "published",
+        "data": {
+          "name": "Aaron Halliday",
+          "registration": "143",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:adam-sumner-39eafecc8db7",
+        "slug": "adam-sumner-39eafecc8db7",
+        "status": "published",
+        "data": {
+          "name": "Adam Sumner",
+          "registration": "464",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:adrian-campbell-c8a97967f573",
+        "slug": "adrian-campbell-c8a97967f573",
+        "status": "published",
+        "data": {
+          "name": "Adrian Campbell",
+          "registration": "463",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:alan-harrup-1513f0625af3",
+        "slug": "alan-harrup-1513f0625af3",
+        "status": "published",
+        "data": {
+          "name": "Alan Harrup",
+          "registration": "445",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:ben-fuller-d4d6fecec3f2",
+        "slug": "ben-fuller-d4d6fecec3f2",
+        "status": "published",
+        "data": {
+          "name": "Ben Fuller",
+          "registration": "473",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:bickle-bickle-8142b2a54772",
+        "slug": "bickle-bickle-8142b2a54772",
+        "status": "published",
+        "data": {
+          "name": "Bickle Bickle",
+          "registration": "359",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:brad-dedrick-4a1dc594a365",
+        "slug": "brad-dedrick-4a1dc594a365",
+        "status": "published",
+        "data": {
+          "name": "Brad Dedrick",
+          "registration": "238",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:brodie-phillips-e11c35f9a686",
+        "slug": "brodie-phillips-e11c35f9a686",
+        "status": "published",
+        "data": {
+          "name": "Brodie Phillips",
+          "registration": "197",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:bryan-kennedy-733712dcc4fd",
+        "slug": "bryan-kennedy-733712dcc4fd",
+        "status": "published",
+        "data": {
+          "name": "Bryan Kennedy",
+          "registration": "146",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:bryan-stock-a38ab90355b4",
+        "slug": "bryan-stock-a38ab90355b4",
+        "status": "published",
+        "data": {
+          "name": "Bryan Stock",
+          "registration": "460",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:courtney-bottrell-c0e9da772abd",
+        "slug": "courtney-bottrell-c0e9da772abd",
+        "status": "published",
+        "data": {
+          "name": "Courtney Bottrell",
+          "registration": "99",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:curtis-ding-2a13417030b2",
+        "slug": "curtis-ding-2a13417030b2",
+        "status": "published",
+        "data": {
+          "name": "Curtis Ding",
+          "registration": "454",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:danny-vann-d3e09ab77a79",
+        "slug": "danny-vann-d3e09ab77a79",
+        "status": "published",
+        "data": {
+          "name": "Danny Vann",
+          "registration": "527",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:darren-lovell-78dbaefa1ad6",
+        "slug": "darren-lovell-78dbaefa1ad6",
+        "status": "published",
+        "data": {
+          "name": "Darren Lovell",
+          "registration": "OCC",
+          "registration_review": "OCC / unnumbered",
+          "aliases": [],
+          "notes": "Imported with OCC or no numbered registration. Confirm identity before combining with another profile."
+        }
+      },
+      {
+        "id": "players:dave-hall-86a7ba35b3ed",
+        "slug": "dave-hall-86a7ba35b3ed",
+        "status": "published",
+        "data": {
+          "name": "Dave Hall",
+          "registration": "468",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:ethan-bray-48ceafbbac1c",
+        "slug": "ethan-bray-48ceafbbac1c",
+        "status": "published",
+        "data": {
+          "name": "Ethan Bray",
+          "registration": "322",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:finian-roche-3942662353f0",
+        "slug": "finian-roche-3942662353f0",
+        "status": "published",
+        "data": {
+          "name": "Finian Roche",
+          "registration": "198",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:gary-kennedy-2879e72baa9e",
+        "slug": "gary-kennedy-2879e72baa9e",
+        "status": "published",
+        "data": {
+          "name": "Gary Kennedy",
+          "registration": "160",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:geoff-matthews-ae965aa125d6",
+        "slug": "geoff-matthews-ae965aa125d6",
+        "status": "published",
+        "data": {
+          "name": "Geoff Matthews",
+          "registration": "368",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:hamish-height-fb0a4a74015c",
+        "slug": "hamish-height-fb0a4a74015c",
+        "status": "published",
+        "data": {
+          "name": "Hamish Height",
+          "registration": "199",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:jack-richardson-8f24fa4b5339",
+        "slug": "jack-richardson-8f24fa4b5339",
+        "status": "published",
+        "data": {
+          "name": "Jack Richardson",
+          "registration": "189",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:jackson-raftery-c04b1560e184",
+        "slug": "jackson-raftery-c04b1560e184",
+        "status": "published",
+        "data": {
+          "name": "Jackson Raftery",
+          "registration": "462",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:jacob-phillips-090156f4ad14",
+        "slug": "jacob-phillips-090156f4ad14",
+        "status": "published",
+        "data": {
+          "name": "Jacob Phillips",
+          "registration": "181",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:jacques-wadey-4be08f0f5438",
+        "slug": "jacques-wadey-4be08f0f5438",
+        "status": "published",
+        "data": {
+          "name": "Jacques Wadey",
+          "registration": "288",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:jerry-jadormio-0c39ae6a1af8",
+        "slug": "jerry-jadormio-0c39ae6a1af8",
+        "status": "published",
+        "data": {
+          "name": "Jerry Jadormio",
+          "registration": "531",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:john-blunt-8a2fdf320318",
+        "slug": "john-blunt-8a2fdf320318",
+        "status": "published",
+        "data": {
+          "name": "John Blunt",
+          "registration": "435",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:john-gallagher-547ce431df90",
+        "slug": "john-gallagher-547ce431df90",
+        "status": "published",
+        "data": {
+          "name": "John Gallagher",
+          "registration": "91",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:josh-hunt-11c1206fa037",
+        "slug": "josh-hunt-11c1206fa037",
+        "status": "published",
+        "data": {
+          "name": "Josh Hunt",
+          "registration": "173",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:kelvin-grainger-dcced5ac7b27",
+        "slug": "kelvin-grainger-dcced5ac7b27",
+        "status": "published",
+        "data": {
+          "name": "Kelvin Grainger",
+          "registration": "471",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:kevin-mcmahon-efc03cdef0b7",
+        "slug": "kevin-mcmahon-efc03cdef0b7",
+        "status": "published",
+        "data": {
+          "name": "Kevin McMahon",
+          "registration": "431",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:lachlan-stock-ea8d4946420e",
+        "slug": "lachlan-stock-ea8d4946420e",
+        "status": "published",
+        "data": {
+          "name": "Lachlan Stock",
+          "registration": "455",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:lindo-wubbolts-cc2654ed882e",
+        "slug": "lindo-wubbolts-cc2654ed882e",
+        "status": "published",
+        "data": {
+          "name": "Lindo Wubbolts",
+          "registration": "310",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:luke-hall-ed2bce5cf3d2",
+        "slug": "luke-hall-ed2bce5cf3d2",
+        "status": "published",
+        "data": {
+          "name": "Luke Hall",
+          "registration": "140",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:mark-jensen-cfaa7942dc18",
+        "slug": "mark-jensen-cfaa7942dc18",
+        "status": "published",
+        "data": {
+          "name": "Mark Jensen",
+          "registration": "66",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:martin-ding-b3126b5d879c",
+        "slug": "martin-ding-b3126b5d879c",
+        "status": "published",
+        "data": {
+          "name": "Martin Ding",
+          "registration": "483",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:matt-crowell-742eed7432eb",
+        "slug": "matt-crowell-742eed7432eb",
+        "status": "published",
+        "data": {
+          "name": "Matt Crowell",
+          "registration": "217",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:palle-muus-6f8b6ffcfc31",
+        "slug": "palle-muus-6f8b6ffcfc31",
+        "status": "published",
+        "data": {
+          "name": "Palle Muus",
+          "registration": "213",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:paul-bell-f2dd4098ae55",
+        "slug": "paul-bell-f2dd4098ae55",
+        "status": "published",
+        "data": {
+          "name": "Paul Bell",
+          "registration": "498",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:paul-charlton-2b6c6f67fb08",
+        "slug": "paul-charlton-2b6c6f67fb08",
+        "status": "published",
+        "data": {
+          "name": "Paul Charlton",
+          "registration": "321",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:paul-linke-7441f35587a2",
+        "slug": "paul-linke-7441f35587a2",
+        "status": "published",
+        "data": {
+          "name": "Paul Linke",
+          "registration": "363",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:peter-russo-e45124b1e7c9",
+        "slug": "peter-russo-e45124b1e7c9",
+        "status": "published",
+        "data": {
+          "name": "Peter Russo",
+          "registration": "432",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:pierre-nel-5c209a7c0cf9",
+        "slug": "pierre-nel-5c209a7c0cf9",
+        "status": "published",
+        "data": {
+          "name": "Pierre Nel",
+          "registration": "338",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:rob-taylor-2ee309ec9a3a",
+        "slug": "rob-taylor-2ee309ec9a3a",
+        "status": "published",
+        "data": {
+          "name": "Rob Taylor",
+          "registration": "298",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:robert-fleming-904bb8959cc4",
+        "slug": "robert-fleming-904bb8959cc4",
+        "status": "published",
+        "data": {
+          "name": "Robert Fleming",
+          "registration": "266",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:rodger-lingbanan-9071e790f9a0",
+        "slug": "rodger-lingbanan-9071e790f9a0",
+        "status": "published",
+        "data": {
+          "name": "Rodger Lingbanan",
+          "registration": "519",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:ron-jensen-f1ec617b9115",
+        "slug": "ron-jensen-f1ec617b9115",
+        "status": "published",
+        "data": {
+          "name": "Ron Jensen",
+          "registration": "75",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:scott-carrigan-50238b5cf26c",
+        "slug": "scott-carrigan-50238b5cf26c",
+        "status": "published",
+        "data": {
+          "name": "Scott Carrigan",
+          "registration": "324",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:sean-burden-d59eeeaab068",
+        "slug": "sean-burden-d59eeeaab068",
+        "status": "published",
+        "data": {
+          "name": "Sean Burden",
+          "registration": "666",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:shane-below-d7df9abe9d3f",
+        "slug": "shane-below-d7df9abe9d3f",
+        "status": "published",
+        "data": {
+          "name": "Shane Below",
+          "registration": "425",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:taylor-hoffmann-5f00cce49221",
+        "slug": "taylor-hoffmann-5f00cce49221",
+        "status": "published",
+        "data": {
+          "name": "Taylor Hoffmann",
+          "registration": "OCC",
+          "registration_review": "OCC / unnumbered",
+          "aliases": [],
+          "notes": "Imported with OCC or no numbered registration. Confirm identity before combining with another profile."
+        }
+      },
+      {
+        "id": "players:william-hunt-310f22c2e749",
+        "slug": "william-hunt-310f22c2e749",
+        "status": "published",
+        "data": {
+          "name": "William Hunt",
+          "registration": "196",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:zac-de-vries-c80ab58c20a8",
+        "slug": "zac-de-vries-c80ab58c20a8",
+        "status": "published",
+        "data": {
+          "name": "Zac De Vries",
+          "registration": "174",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:aaron-maurici-6ea888c9ad87",
+        "slug": "aaron-maurici-6ea888c9ad87",
+        "status": "published",
+        "data": {
+          "name": "Aaron Maurici",
+          "registration": "295",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:aaron-raymond-eaef2fb51526",
+        "slug": "aaron-raymond-eaef2fb51526",
+        "status": "published",
+        "data": {
+          "name": "Aaron Raymond",
+          "registration": "503",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:alan-wilden-75be0acff9cc",
+        "slug": "alan-wilden-75be0acff9cc",
+        "status": "published",
+        "data": {
+          "name": "Alan Wilden",
+          "registration": "451",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:andrew-engelhardt-32d14ea64f76",
+        "slug": "andrew-engelhardt-32d14ea64f76",
+        "status": "published",
+        "data": {
+          "name": "Andrew Engelhardt",
+          "registration": "299",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:andrew-kemp-13c73d32c4dc",
+        "slug": "andrew-kemp-13c73d32c4dc",
+        "status": "published",
+        "data": {
+          "name": "Andrew Kemp",
+          "registration": "270",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:anthony-ciccarello-c2943b5312c4",
+        "slug": "anthony-ciccarello-c2943b5312c4",
+        "status": "published",
+        "data": {
+          "name": "Anthony Ciccarello",
+          "registration": "371",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:bob-budarick-fc11033b759c",
+        "slug": "bob-budarick-fc11033b759c",
+        "status": "published",
+        "data": {
+          "name": "Bob Budarick",
+          "registration": "206",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:brenton-durham-1574636bbd2a",
+        "slug": "brenton-durham-1574636bbd2a",
+        "status": "published",
+        "data": {
+          "name": "Brenton Durham",
+          "registration": "42",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:brenton-mcrea-d11259c947d6",
+        "slug": "brenton-mcrea-d11259c947d6",
+        "status": "published",
+        "data": {
+          "name": "Brenton McRea",
+          "registration": "428",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:brian-curtis-2578dea67f3d",
+        "slug": "brian-curtis-2578dea67f3d",
+        "status": "published",
+        "data": {
+          "name": "Brian Curtis",
+          "registration": "478",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:chelsea-smith-34b2edadcf08",
+        "slug": "chelsea-smith-34b2edadcf08",
+        "status": "published",
+        "data": {
+          "name": "Chelsea Smith",
+          "registration": "OCC",
+          "registration_review": "OCC / unnumbered",
+          "aliases": [],
+          "notes": "Imported with OCC or no numbered registration. Confirm identity before combining with another profile."
+        }
+      },
+      {
+        "id": "players:chris-cocking-1fbb4158cbde",
+        "slug": "chris-cocking-1fbb4158cbde",
+        "status": "published",
+        "data": {
+          "name": "Chris Cocking",
+          "registration": "164",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:chris-gilbert-7e9a61a243dd",
+        "slug": "chris-gilbert-7e9a61a243dd",
+        "status": "published",
+        "data": {
+          "name": "Chris Gilbert",
+          "registration": "457",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:chris-small-0c78d2d7381a",
+        "slug": "chris-small-0c78d2d7381a",
+        "status": "published",
+        "data": {
+          "name": "Chris Small",
+          "registration": "218",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:clinton-smith-376fe2d6de1c",
+        "slug": "clinton-smith-376fe2d6de1c",
+        "status": "published",
+        "data": {
+          "name": "Clinton Smith",
+          "registration": "470",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:cooper-wall-2faaf7019d9e",
+        "slug": "cooper-wall-2faaf7019d9e",
+        "status": "published",
+        "data": {
+          "name": "Cooper Wall",
+          "registration": "443",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:daniele-nardelli-3ccaec441750",
+        "slug": "daniele-nardelli-3ccaec441750",
+        "status": "published",
+        "data": {
+          "name": "Daniele Nardelli",
+          "registration": "327",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:darren-kearns-ce56b2996231",
+        "slug": "darren-kearns-ce56b2996231",
+        "status": "published",
+        "data": {
+          "name": "Darren Kearns",
+          "registration": "474",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:darren-kelsey-df65245fbd44",
+        "slug": "darren-kelsey-df65245fbd44",
+        "status": "published",
+        "data": {
+          "name": "Darren Kelsey",
+          "registration": "410",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:david-mclachlan-b253dd008f01",
+        "slug": "david-mclachlan-b253dd008f01",
+        "status": "published",
+        "data": {
+          "name": "David McLachlan",
+          "registration": "532",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:david-petherbridge-13963dd1f4d6",
+        "slug": "david-petherbridge-13963dd1f4d6",
+        "status": "published",
+        "data": {
+          "name": "David Petherbridge",
+          "registration": "71",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:derek-smith-b6acec5ca9e4",
+        "slug": "derek-smith-b6acec5ca9e4",
+        "status": "published",
+        "data": {
+          "name": "Derek Smith",
+          "registration": "158",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:dwayne-playfair-6b5778831eb7",
+        "slug": "dwayne-playfair-6b5778831eb7",
+        "status": "published",
+        "data": {
+          "name": "Dwayne Playfair",
+          "registration": "416",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:evelyn-hopper-c53d4cedee8d",
+        "slug": "evelyn-hopper-c53d4cedee8d",
+        "status": "published",
+        "data": {
+          "name": "Evelyn Hopper",
+          "registration": "354",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:gary-wybrew-7c49d3b71167",
+        "slug": "gary-wybrew-7c49d3b71167",
+        "status": "published",
+        "data": {
+          "name": "Gary Wybrew",
+          "registration": "477",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:geoff-shiell-2dbdec70afb0",
+        "slug": "geoff-shiell-2dbdec70afb0",
+        "status": "published",
+        "data": {
+          "name": "Geoff Shiell",
+          "registration": "465",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:john-a-smith-de13cb7444a3",
+        "slug": "john-a-smith-de13cb7444a3",
+        "status": "published",
+        "data": {
+          "name": "John A Smith",
+          "registration": "85",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:john-eade-26d7ffcb1265",
+        "slug": "john-eade-26d7ffcb1265",
+        "status": "published",
+        "data": {
+          "name": "John Eade",
+          "registration": "408",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:kayla-jeffery-cc04a5fc8062",
+        "slug": "kayla-jeffery-cc04a5fc8062",
+        "status": "published",
+        "data": {
+          "name": "Kayla Jeffery",
+          "registration": "OCC",
+          "registration_review": "OCC / unnumbered",
+          "aliases": [],
+          "notes": "Imported with OCC or no numbered registration. Confirm identity before combining with another profile."
+        }
+      },
+      {
+        "id": "players:kelly-roberts-672622e7e039",
+        "slug": "kelly-roberts-672622e7e039",
+        "status": "published",
+        "data": {
+          "name": "Kelly Roberts",
+          "registration": "191",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:lachlan-stopa-fe9e7f38cbe5",
+        "slug": "lachlan-stopa-fe9e7f38cbe5",
+        "status": "published",
+        "data": {
+          "name": "Lachlan Stopa",
+          "registration": "175",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:liam-gavin-7e591ebefa60",
+        "slug": "liam-gavin-7e591ebefa60",
+        "status": "published",
+        "data": {
+          "name": "Liam Gavin",
+          "registration": "459",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:lyn-petherbridge-5b0b75abf90e",
+        "slug": "lyn-petherbridge-5b0b75abf90e",
+        "status": "published",
+        "data": {
+          "name": "Lyn Petherbridge",
+          "registration": "67",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:mark-roberts-57270030de25",
+        "slug": "mark-roberts-57270030de25",
+        "status": "published",
+        "data": {
+          "name": "Mark Roberts",
+          "registration": "86",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:matt-manoel-8b44a8abccfc",
+        "slug": "matt-manoel-8b44a8abccfc",
+        "status": "published",
+        "data": {
+          "name": "Matt Manoel",
+          "registration": "436",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:michael-ronan-34ed1e9c42ee",
+        "slug": "michael-ronan-34ed1e9c42ee",
+        "status": "published",
+        "data": {
+          "name": "Michael Ronan",
+          "registration": "346",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:michael-smith-d09175496744",
+        "slug": "michael-smith-d09175496744",
+        "status": "published",
+        "data": {
+          "name": "Michael Smith",
+          "registration": "426",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:michael-van-mook-3ef463d3cad6",
+        "slug": "michael-van-mook-3ef463d3cad6",
+        "status": "published",
+        "data": {
+          "name": "Michael Van Mook",
+          "registration": "297",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:narelle-king-b1e6425df5f6",
+        "slug": "narelle-king-b1e6425df5f6",
+        "status": "published",
+        "data": {
+          "name": "Narelle King",
+          "registration": "180",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:paul-barnes-b27ab0b91cb1",
+        "slug": "paul-barnes-b27ab0b91cb1",
+        "status": "published",
+        "data": {
+          "name": "Paul Barnes",
+          "registration": "406",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:paul-brooks-152886f9ad61",
+        "slug": "paul-brooks-152886f9ad61",
+        "status": "published",
+        "data": {
+          "name": "Paul Brooks",
+          "registration": "439",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:paul-cosgrove-6575ecb5d9ee",
+        "slug": "paul-cosgrove-6575ecb5d9ee",
+        "status": "published",
+        "data": {
+          "name": "Paul Cosgrove",
+          "registration": "169",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:paul-sayner-2029131896eb",
+        "slug": "paul-sayner-2029131896eb",
+        "status": "published",
+        "data": {
+          "name": "Paul Sayner",
+          "registration": "273",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:phillip-jeffery-0cf45775866c",
+        "slug": "phillip-jeffery-0cf45775866c",
+        "status": "published",
+        "data": {
+          "name": "Phillip Jeffery",
+          "registration": "246",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:ray-maricic-810941225902",
+        "slug": "ray-maricic-810941225902",
+        "status": "published",
+        "data": {
+          "name": "Ray Maricic",
+          "registration": "28",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:ron-andrews-eaec72d8c866",
+        "slug": "ron-andrews-eaec72d8c866",
+        "status": "published",
+        "data": {
+          "name": "Ron Andrews",
+          "registration": "261",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:russell-knight-ee4a5b52a3ea",
+        "slug": "russell-knight-ee4a5b52a3ea",
+        "status": "published",
+        "data": {
+          "name": "Russell Knight",
+          "registration": "476",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:sally-anne-kutcher-83d1850bdaf8",
+        "slug": "sally-anne-kutcher-83d1850bdaf8",
+        "status": "published",
+        "data": {
+          "name": "Sally-Anne Kutcher",
+          "registration": "29",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:stephen-ditton-0b42cd47710a",
+        "slug": "stephen-ditton-0b42cd47710a",
+        "status": "published",
+        "data": {
+          "name": "Stephen Ditton",
+          "registration": "144",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:steve-jones-76e18d6dfc57",
+        "slug": "steve-jones-76e18d6dfc57",
+        "status": "published",
+        "data": {
+          "name": "Steve Jones",
+          "registration": "337",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:steven-lord-e837b82d57e4",
+        "slug": "steven-lord-e837b82d57e4",
+        "status": "published",
+        "data": {
+          "name": "Steven Lord",
+          "registration": "504",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:stewart-anderson-516ecc2e9335",
+        "slug": "stewart-anderson-516ecc2e9335",
+        "status": "published",
+        "data": {
+          "name": "Stewart Anderson",
+          "registration": "202",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:todd-chynoweth-1d94f32f2feb",
+        "slug": "todd-chynoweth-1d94f32f2feb",
+        "status": "published",
+        "data": {
+          "name": "Todd Chynoweth",
+          "registration": "437",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:tym-gurd-3190f15519b1",
+        "slug": "tym-gurd-3190f15519b1",
+        "status": "published",
+        "data": {
+          "name": "Tym Gurd",
+          "registration": "OCC",
+          "registration_review": "OCC / unnumbered",
+          "aliases": [],
+          "notes": "Imported with OCC or no numbered registration. Confirm identity before combining with another profile."
+        }
+      },
+      {
+        "id": "players:warran-bennett-9b38ed9ca92e",
+        "slug": "warran-bennett-9b38ed9ca92e",
+        "status": "published",
+        "data": {
+          "name": "Warran Bennett",
+          "registration": "497",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:adam-totolas-25be7ed6cfbc",
+        "slug": "adam-totolas-25be7ed6cfbc",
+        "status": "published",
+        "data": {
+          "name": "Adam Totolas",
+          "registration": "350",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:aidan-kosmanis-20b3380dfc42",
+        "slug": "aidan-kosmanis-20b3380dfc42",
+        "status": "published",
+        "data": {
+          "name": "Aidan Kosmanis",
+          "registration": "517",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:allen-francis-4d82f12ede73",
+        "slug": "allen-francis-4d82f12ede73",
+        "status": "published",
+        "data": {
+          "name": "Allen Francis",
+          "registration": "23",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:andrew-westbury-9b968c88162d",
+        "slug": "andrew-westbury-9b968c88162d",
+        "status": "published",
+        "data": {
+          "name": "Andrew Westbury",
+          "registration": "524",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:belinda-nettleton-06510f28dea9",
+        "slug": "belinda-nettleton-06510f28dea9",
+        "status": "published",
+        "data": {
+          "name": "Belinda Nettleton",
+          "registration": "OCC",
+          "registration_review": "OCC / unnumbered",
+          "aliases": [],
+          "notes": "Imported with OCC or no numbered registration. Confirm identity before combining with another profile."
+        }
+      },
+      {
+        "id": "players:ben-purvis-7c521b669468",
+        "slug": "ben-purvis-7c521b669468",
+        "status": "published",
+        "data": {
+          "name": "Ben Purvis",
+          "registration": "512",
+          "registration_review": "Duplicate number — review",
+          "aliases": [],
+          "notes": "The source uses registration 512 for more than one name. Confirm this number with WADA; do not merge players by number alone."
+        }
+      },
+      {
+        "id": "players:brett-ware-5fe63532cc6b",
+        "slug": "brett-ware-5fe63532cc6b",
+        "status": "published",
+        "data": {
+          "name": "Brett Ware",
+          "registration": "260",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:brian-russell-815c7a8ff6fd",
+        "slug": "brian-russell-815c7a8ff6fd",
+        "status": "published",
+        "data": {
+          "name": "Brian Russell",
+          "registration": "129",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:chad-pilkington-0b5d578b72d0",
+        "slug": "chad-pilkington-0b5d578b72d0",
+        "status": "published",
+        "data": {
+          "name": "Chad Pilkington",
+          "registration": "501",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:chad-wyatt-fb4b6850e29e",
+        "slug": "chad-wyatt-fb4b6850e29e",
+        "status": "published",
+        "data": {
+          "name": "Chad Wyatt",
+          "registration": "208",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:chona-calligaris-537f825e3277",
+        "slug": "chona-calligaris-537f825e3277",
+        "status": "published",
+        "data": {
+          "name": "Chona Calligaris",
+          "registration": "510",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:darren-fogarty-5dca9f1d3136",
+        "slug": "darren-fogarty-5dca9f1d3136",
+        "status": "published",
+        "data": {
+          "name": "Darren Fogarty",
+          "registration": "360",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:david-froud-d748e32730a3",
+        "slug": "david-froud-d748e32730a3",
+        "status": "published",
+        "data": {
+          "name": "David Froud",
+          "registration": "512",
+          "registration_review": "Duplicate number — review",
+          "aliases": [],
+          "notes": "The source uses registration 512 for more than one name. Confirm this number with WADA; do not merge players by number alone."
+        }
+      },
+      {
+        "id": "players:di-barnett-42f7fe1714a8",
+        "slug": "di-barnett-42f7fe1714a8",
+        "status": "published",
+        "data": {
+          "name": "Di Barnett",
+          "registration": "12",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:evan-duff-bb9247c3f6db",
+        "slug": "evan-duff-bb9247c3f6db",
+        "status": "published",
+        "data": {
+          "name": "Evan Duff",
+          "registration": "222",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:gail-vahldieck-04ac8ace2bd3",
+        "slug": "gail-vahldieck-04ac8ace2bd3",
+        "status": "published",
+        "data": {
+          "name": "Gail Vahldieck",
+          "registration": "OCC",
+          "registration_review": "OCC / unnumbered",
+          "aliases": [],
+          "notes": "Imported with OCC or no numbered registration. Confirm identity before combining with another profile."
+        }
+      },
+      {
+        "id": "players:gerry-paul-ff033197cbc4",
+        "slug": "gerry-paul-ff033197cbc4",
+        "status": "published",
+        "data": {
+          "name": "Gerry Paul",
+          "registration": "528",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:glyn-chidlow-8a1c6b00b67d",
+        "slug": "glyn-chidlow-8a1c6b00b67d",
+        "status": "published",
+        "data": {
+          "name": "Glyn Chidlow",
+          "registration": "221",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:grant-pearce-6221faa534a0",
+        "slug": "grant-pearce-6221faa534a0",
+        "status": "published",
+        "data": {
+          "name": "Grant Pearce",
+          "registration": "382",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:guido-calligaris-ea280589b4bb",
+        "slug": "guido-calligaris-ea280589b4bb",
+        "status": "published",
+        "data": {
+          "name": "Guido Calligaris",
+          "registration": "507",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:hugh-hocking-84c59d498f40",
+        "slug": "hugh-hocking-84c59d498f40",
+        "status": "published",
+        "data": {
+          "name": "Hugh Hocking",
+          "registration": "78",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:ian-hockley-c8759791ed0e",
+        "slug": "ian-hockley-c8759791ed0e",
+        "status": "published",
+        "data": {
+          "name": "Ian Hockley",
+          "registration": "254",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:jason-bodley-fd6da4be4361",
+        "slug": "jason-bodley-fd6da4be4361",
+        "status": "published",
+        "data": {
+          "name": "Jason Bodley",
+          "registration": "188",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:jordan-lipson-6064cbd6287d",
+        "slug": "jordan-lipson-6064cbd6287d",
+        "status": "published",
+        "data": {
+          "name": "Jordan Lipson",
+          "registration": "529",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:jun-pacho-87a4c62907ab",
+        "slug": "jun-pacho-87a4c62907ab",
+        "status": "published",
+        "data": {
+          "name": "Jun Pacho",
+          "registration": "511",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:karen-allen-9b80ab52ee9e",
+        "slug": "karen-allen-9b80ab52ee9e",
+        "status": "published",
+        "data": {
+          "name": "Karen Allen",
+          "registration": "305",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:ken-lawrence-91a7342b4b55",
+        "slug": "ken-lawrence-91a7342b4b55",
+        "status": "published",
+        "data": {
+          "name": "Ken Lawrence",
+          "registration": "48",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:leanda-freeman-cbb1ae21ba46",
+        "slug": "leanda-freeman-cbb1ae21ba46",
+        "status": "published",
+        "data": {
+          "name": "Leanda Freeman",
+          "registration": "OCC",
+          "registration_review": "OCC / unnumbered",
+          "aliases": [],
+          "notes": "Imported with OCC or no numbered registration. Confirm identity before combining with another profile."
+        }
+      },
+      {
+        "id": "players:lee-ellis-977528fe0ea3",
+        "slug": "lee-ellis-977528fe0ea3",
+        "status": "published",
+        "data": {
+          "name": "Lee Ellis",
+          "registration": "82",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:lenard-faci-455753068683",
+        "slug": "lenard-faci-455753068683",
+        "status": "published",
+        "data": {
+          "name": "Lenard Faci",
+          "registration": "513",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:liz-jenkins-310cd12c1dbb",
+        "slug": "liz-jenkins-310cd12c1dbb",
+        "status": "published",
+        "data": {
+          "name": "Liz Jenkins",
+          "registration": "380",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:lyn-holmes-a6e7c5857157",
+        "slug": "lyn-holmes-a6e7c5857157",
+        "status": "published",
+        "data": {
+          "name": "Lyn Holmes",
+          "registration": "98",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:mal-myles-b2215e2fea96",
+        "slug": "mal-myles-b2215e2fea96",
+        "status": "published",
+        "data": {
+          "name": "Mal Myles",
+          "registration": "200",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:marc-webber-a5a7bc7c4400",
+        "slug": "marc-webber-a5a7bc7c4400",
+        "status": "published",
+        "data": {
+          "name": "Marc Webber",
+          "registration": "121",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:mark-daymon-bbbdc543f7a6",
+        "slug": "mark-daymon-bbbdc543f7a6",
+        "status": "published",
+        "data": {
+          "name": "Mark Daymon",
+          "registration": "137",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:mark-manning-adcb7b1e8d88",
+        "slug": "mark-manning-adcb7b1e8d88",
+        "status": "published",
+        "data": {
+          "name": "Mark Manning",
+          "registration": "269",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:marty-strozik-c826cd2746e6",
+        "slug": "marty-strozik-c826cd2746e6",
+        "status": "published",
+        "data": {
+          "name": "Marty Strozik",
+          "registration": "520",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:matt-baker-9603cb532bf5",
+        "slug": "matt-baker-9603cb532bf5",
+        "status": "published",
+        "data": {
+          "name": "Matt Baker",
+          "registration": "514",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:matt-tonkins-c6b657218aa9",
+        "slug": "matt-tonkins-c6b657218aa9",
+        "status": "published",
+        "data": {
+          "name": "Matt Tonkins",
+          "registration": "OCC",
+          "registration_review": "OCC / unnumbered",
+          "aliases": [],
+          "notes": "Imported with OCC or no numbered registration. Confirm identity before combining with another profile."
+        }
+      },
+      {
+        "id": "players:nick-charlesworth-6cd584ffbbfd",
+        "slug": "nick-charlesworth-6cd584ffbbfd",
+        "status": "published",
+        "data": {
+          "name": "Nick Charlesworth",
+          "registration": "OCC",
+          "registration_review": "OCC / unnumbered",
+          "aliases": [],
+          "notes": "Imported with OCC or no numbered registration. Confirm identity before combining with another profile."
+        }
+      },
+      {
+        "id": "players:nick-ginever-68d6e370d165",
+        "slug": "nick-ginever-68d6e370d165",
+        "status": "published",
+        "data": {
+          "name": "Nick Ginever",
+          "registration": "152",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:olivia-manzie-c255ab504605",
+        "slug": "olivia-manzie-c255ab504605",
+        "status": "published",
+        "data": {
+          "name": "Olivia Manzie",
+          "registration": "509",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:pat-o-malley-2730ccc59898",
+        "slug": "pat-o-malley-2730ccc59898",
+        "status": "published",
+        "data": {
+          "name": "Pat O'Malley",
+          "registration": "262",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:paul-haines-ca113d89592c",
+        "slug": "paul-haines-ca113d89592c",
+        "status": "published",
+        "data": {
+          "name": "Paul Haines",
+          "registration": "77",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:paul-templer-1e7edd982cc2",
+        "slug": "paul-templer-1e7edd982cc2",
+        "status": "published",
+        "data": {
+          "name": "Paul Templer",
+          "registration": "316",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:peter-ware-ff82cfdf54ca",
+        "slug": "peter-ware-ff82cfdf54ca",
+        "status": "published",
+        "data": {
+          "name": "Peter Ware",
+          "registration": "101",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:riley-hawthorn-462dcd603d69",
+        "slug": "riley-hawthorn-462dcd603d69",
+        "status": "published",
+        "data": {
+          "name": "Riley Hawthorn",
+          "registration": "145",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:rod-laing-9473503cd447",
+        "slug": "rod-laing-9473503cd447",
+        "status": "published",
+        "data": {
+          "name": "Rod Laing",
+          "registration": "301",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:rodger-palmrose-57f24582e707",
+        "slug": "rodger-palmrose-57f24582e707",
+        "status": "published",
+        "data": {
+          "name": "Rodger Palmrose",
+          "registration": "277",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:ros-palmrose-f67a55c5d383",
+        "slug": "ros-palmrose-f67a55c5d383",
+        "status": "published",
+        "data": {
+          "name": "Ros Palmrose",
+          "registration": "278",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:sam-calligaris-776f14e8de8b",
+        "slug": "sam-calligaris-776f14e8de8b",
+        "status": "published",
+        "data": {
+          "name": "Sam Calligaris",
+          "registration": "506",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:shane-spackman-d25334414759",
+        "slug": "shane-spackman-d25334414759",
+        "status": "published",
+        "data": {
+          "name": "Shane Spackman",
+          "registration": "24",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:sharan-totolas-0ccefdcd5770",
+        "slug": "sharan-totolas-0ccefdcd5770",
+        "status": "published",
+        "data": {
+          "name": "Sharan Totolas",
+          "registration": "480",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:shaun-prior-e7db4952c4b1",
+        "slug": "shaun-prior-e7db4952c4b1",
+        "status": "published",
+        "data": {
+          "name": "Shaun Prior",
+          "registration": "508",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:stelios-neocleous-84464b8842c5",
+        "slug": "stelios-neocleous-84464b8842c5",
+        "status": "published",
+        "data": {
+          "name": "Stelios Neocleous",
+          "registration": "43",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:tom-nerris-51c6e0f11946",
+        "slug": "tom-nerris-51c6e0f11946",
+        "status": "published",
+        "data": {
+          "name": "Tom Nerris",
+          "registration": "458",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:travis-wyatt-f3141adefc09",
+        "slug": "travis-wyatt-f3141adefc09",
+        "status": "published",
+        "data": {
+          "name": "Travis Wyatt",
+          "registration": "116",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:adam-ford-57b38556a115",
+        "slug": "adam-ford-57b38556a115",
+        "status": "published",
+        "data": {
+          "name": "Adam Ford",
+          "registration": "141",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:alan-johnson-2706e02c5ba6",
+        "slug": "alan-johnson-2706e02c5ba6",
+        "status": "published",
+        "data": {
+          "name": "Alan Johnson",
+          "registration": "523",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:alister-mccallum-ab59efe80e81",
+        "slug": "alister-mccallum-ab59efe80e81",
+        "status": "published",
+        "data": {
+          "name": "Alister McCallum",
+          "registration": "447",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:andrew-herewane-4280590d52a0",
+        "slug": "andrew-herewane-4280590d52a0",
+        "status": "published",
+        "data": {
+          "name": "Andrew Herewane",
+          "registration": "272",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:barry-lowry-2f4def97ecbe",
+        "slug": "barry-lowry-2f4def97ecbe",
+        "status": "published",
+        "data": {
+          "name": "Barry Lowry",
+          "registration": "30",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:basil-demetriou-2abbafd720eb",
+        "slug": "basil-demetriou-2abbafd720eb",
+        "status": "published",
+        "data": {
+          "name": "Basil Demetriou",
+          "registration": "333",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:belinda-mitchell-8b17e8a51ad1",
+        "slug": "belinda-mitchell-8b17e8a51ad1",
+        "status": "published",
+        "data": {
+          "name": "Belinda Mitchell",
+          "registration": "211",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:bob-flaherty-bf964b07fe76",
+        "slug": "bob-flaherty-bf964b07fe76",
+        "status": "published",
+        "data": {
+          "name": "Bob Flaherty",
+          "registration": "370",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:cassandra-rust-1d04d567560c",
+        "slug": "cassandra-rust-1d04d567560c",
+        "status": "published",
+        "data": {
+          "name": "Cassandra Rust",
+          "registration": "461",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:cheryl-mccall-ffb1e25a66bd",
+        "slug": "cheryl-mccall-ffb1e25a66bd",
+        "status": "published",
+        "data": {
+          "name": "Cheryl McCall",
+          "registration": "33",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:cheryl-weeden-c53eaf240deb",
+        "slug": "cheryl-weeden-c53eaf240deb",
+        "status": "published",
+        "data": {
+          "name": "Cheryl Weeden",
+          "registration": "353",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:chris-lennon-3b8a04f3b584",
+        "slug": "chris-lennon-3b8a04f3b584",
+        "status": "published",
+        "data": {
+          "name": "Chris Lennon",
+          "registration": "280",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:david-west-782d5f8141ef",
+        "slug": "david-west-782d5f8141ef",
+        "status": "published",
+        "data": {
+          "name": "David West",
+          "registration": "127",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:denny-godefroy-0399b21a3c48",
+        "slug": "denny-godefroy-0399b21a3c48",
+        "status": "published",
+        "data": {
+          "name": "Denny Godefroy",
+          "registration": "59",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:dylan-hoare-48ecda6d7999",
+        "slug": "dylan-hoare-48ecda6d7999",
+        "status": "published",
+        "data": {
+          "name": "Dylan Hoare",
+          "registration": "377",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:eugene-lazo-reitz-42d98587d76c",
+        "slug": "eugene-lazo-reitz-42d98587d76c",
+        "status": "published",
+        "data": {
+          "name": "Eugene Lazo Reitz",
+          "registration": "223",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:gary-brooks-d8c76934edf3",
+        "slug": "gary-brooks-d8c76934edf3",
+        "status": "published",
+        "data": {
+          "name": "Gary Brooks",
+          "registration": "240",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:gary-davis-48efd88e171d",
+        "slug": "gary-davis-48efd88e171d",
+        "status": "published",
+        "data": {
+          "name": "Gary Davis",
+          "registration": "105",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:ian-sutton-676890b09aa3",
+        "slug": "ian-sutton-676890b09aa3",
+        "status": "published",
+        "data": {
+          "name": "Ian Sutton",
+          "registration": "53",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:jack-ducker-67960266701d",
+        "slug": "jack-ducker-67960266701d",
+        "status": "published",
+        "data": {
+          "name": "Jack Ducker",
+          "registration": "449",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:jack-hoare-a8e4552dc85b",
+        "slug": "jack-hoare-a8e4552dc85b",
+        "status": "published",
+        "data": {
+          "name": "Jack Hoare",
+          "registration": "OCC",
+          "registration_review": "OCC / unnumbered",
+          "aliases": [],
+          "notes": "Imported with OCC or no numbered registration. Confirm identity before combining with another profile."
+        }
+      },
+      {
+        "id": "players:jack-wilson-11e542e31171",
+        "slug": "jack-wilson-11e542e31171",
+        "status": "published",
+        "data": {
+          "name": "Jack Wilson",
+          "registration": "533",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:jenine-myers-d5b541dd912f",
+        "slug": "jenine-myers-d5b541dd912f",
+        "status": "published",
+        "data": {
+          "name": "Jenine Myers",
+          "registration": "314",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:jess-hoare-07dd170793d6",
+        "slug": "jess-hoare-07dd170793d6",
+        "status": "published",
+        "data": {
+          "name": "Jess Hoare",
+          "registration": "526",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:joel-harvey-friel-64b9f1612461",
+        "slug": "joel-harvey-friel-64b9f1612461",
+        "status": "published",
+        "data": {
+          "name": "Joel Harvey-Friel",
+          "registration": "487",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:john-harris-a833d70a4e1d",
+        "slug": "john-harris-a833d70a4e1d",
+        "status": "published",
+        "data": {
+          "name": "John Harris",
+          "registration": "367",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:john-perriman-3ea6991c7e97",
+        "slug": "john-perriman-3ea6991c7e97",
+        "status": "published",
+        "data": {
+          "name": "John Perriman",
+          "registration": "442",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:julie-goold-ea43986f6345",
+        "slug": "julie-goold-ea43986f6345",
+        "status": "published",
+        "data": {
+          "name": "Julie Goold",
+          "registration": "125",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:justin-baldwin-de0fc9126fa6",
+        "slug": "justin-baldwin-de0fc9126fa6",
+        "status": "published",
+        "data": {
+          "name": "Justin Baldwin",
+          "registration": "466",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:karen-harvey-ae70c093deba",
+        "slug": "karen-harvey-ae70c093deba",
+        "status": "published",
+        "data": {
+          "name": "Karen Harvey",
+          "registration": "205",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:kayne-polomka-ee7a99f28e0a",
+        "slug": "kayne-polomka-ee7a99f28e0a",
+        "status": "published",
+        "data": {
+          "name": "Kayne Polomka",
+          "registration": "215",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:leeane-millard-66cbc29dd2f3",
+        "slug": "leeane-millard-66cbc29dd2f3",
+        "status": "published",
+        "data": {
+          "name": "Leeane Millard",
+          "registration": "142",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:li-mastrocinque-587018270572",
+        "slug": "li-mastrocinque-587018270572",
+        "status": "published",
+        "data": {
+          "name": "Li Mastrocinque",
+          "registration": "495",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:luka-kolundzija-287fa8e9e412",
+        "slug": "luka-kolundzija-287fa8e9e412",
+        "status": "published",
+        "data": {
+          "name": "Luka Kolundzija",
+          "registration": "488",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:marg-mccallum-e27d61f2fad2",
+        "slug": "marg-mccallum-e27d61f2fad2",
+        "status": "published",
+        "data": {
+          "name": "Marg McCallum",
+          "registration": "258",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:maria-lesage-edaf7cfa46eb",
+        "slug": "maria-lesage-edaf7cfa46eb",
+        "status": "published",
+        "data": {
+          "name": "Maria Lesage",
+          "registration": "226",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:mary-aay-eac080d4e611",
+        "slug": "mary-aay-eac080d4e611",
+        "status": "published",
+        "data": {
+          "name": "Mary Aay",
+          "registration": "117",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:neil-millard-2b987d4b64b4",
+        "slug": "neil-millard-2b987d4b64b4",
+        "status": "published",
+        "data": {
+          "name": "Neil Millard",
+          "registration": "10",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:pauline-mcdonough-90cfe00425a0",
+        "slug": "pauline-mcdonough-90cfe00425a0",
+        "status": "published",
+        "data": {
+          "name": "Pauline McDonough",
+          "registration": "289",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:peter-bouzalas-32bc9d306c20",
+        "slug": "peter-bouzalas-32bc9d306c20",
+        "status": "published",
+        "data": {
+          "name": "Peter Bouzalas",
+          "registration": "490",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:peter-katsambis-9a53a7137f82",
+        "slug": "peter-katsambis-9a53a7137f82",
+        "status": "published",
+        "data": {
+          "name": "Peter Katsambis",
+          "registration": "496",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:peter-mcvicars-60f34f056568",
+        "slug": "peter-mcvicars-60f34f056568",
+        "status": "published",
+        "data": {
+          "name": "Peter McVicars",
+          "registration": "159",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:ray-polomka-13d768e82cc5",
+        "slug": "ray-polomka-13d768e82cc5",
+        "status": "published",
+        "data": {
+          "name": "Ray Polomka",
+          "registration": "225",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:sally-allen-816824131ba3",
+        "slug": "sally-allen-816824131ba3",
+        "status": "published",
+        "data": {
+          "name": "Sally Allen",
+          "registration": "237",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:sava-hatzi-cd6f936889eb",
+        "slug": "sava-hatzi-cd6f936889eb",
+        "status": "published",
+        "data": {
+          "name": "Sava Hatzi",
+          "registration": "489",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:sotiros-vassilious-eb443b41b7a6",
+        "slug": "sotiros-vassilious-eb443b41b7a6",
+        "status": "published",
+        "data": {
+          "name": "Sotiros Vassilious",
+          "registration": "530",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:talon-keimeier-27c733638ff4",
+        "slug": "talon-keimeier-27c733638ff4",
+        "status": "published",
+        "data": {
+          "name": "Talon Keimeier",
+          "registration": "518",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:tam-ribbins-f384f62a3927",
+        "slug": "tam-ribbins-f384f62a3927",
+        "status": "published",
+        "data": {
+          "name": "Tam Ribbins",
+          "registration": "317",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:taylah-hoare-759214964494",
+        "slug": "taylah-hoare-759214964494",
+        "status": "published",
+        "data": {
+          "name": "Taylah Hoare",
+          "registration": "429",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:tim-hickman-447f21a04d32",
+        "slug": "tim-hickman-447f21a04d32",
+        "status": "published",
+        "data": {
+          "name": "Tim Hickman",
+          "registration": "452",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:tim-martin-7918b98fe0f2",
+        "slug": "tim-martin-7918b98fe0f2",
+        "status": "published",
+        "data": {
+          "name": "Tim Martin",
+          "registration": "386",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      },
+      {
+        "id": "players:val-west-c7fbeb9cd6df",
+        "slug": "val-west-c7fbeb9cd6df",
+        "status": "published",
+        "data": {
+          "name": "Val West",
+          "registration": "55",
+          "registration_review": "As published",
+          "aliases": [],
+          "notes": ""
+        }
+      }
+    ]
+  }
+}

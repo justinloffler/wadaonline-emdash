@@ -1,0 +1,17 @@
+---
+import { Image, PortableText } from 'emdash/ui';
+import { sanitizeHref } from 'emdash';
+import WadaLayout from '../layouts/WadaLayout.astro';
+import { getWadaProfile, getWadaCollection } from '../lib/wada';
+const [profile, committee, memorials] = await Promise.all([getWadaProfile(), getWadaCollection('committee'), getWadaCollection('memorials')]);
+if (Astro.cache?.enabled) for (const hint of [profile.cacheHint, ...committee.cacheHints, ...memorials.cacheHints]) Astro.cache.set(hint);
+const site = profile.entry;
+const ordered = <T extends { data: { display_order?: number } }>(items: T[]) => items.sort((a,b) => (a.data.display_order ?? 100) - (b.data.display_order ?? 100));
+---
+<WadaLayout title="About WADA">
+  <header class="wada-heading"><p class="wada-kicker">Western Area Darts Association</p><h1>About WADA</h1></header>
+  {site && <section class="wada-section wada-prose" {...site.edit.content}><PortableText value={site.data.content ?? []} /></section>}
+  <section class="wada-section"><h2>Who runs WADA</h2><div class="wada-grid">{ordered(committee.entries).map(person => <article class="wada-card">{person.data.photo && <Image image={person.data.photo} />}<p class="wada-kicker" {...person.edit.role}>{person.data.role}</p><h3 {...person.edit.name}>{person.data.name}</h3><p {...person.edit.term}>{person.data.term}</p></article>)}</div></section>
+  {site && <section class="wada-section wada-contact" id="contact"><h2>Contact &amp; join</h2><p>Our home ground: {site.data.home_ground}, {site.data.home_address}.</p><a href={`mailto:${site.data.email}`}>{site.data.email}</a>{site.data.facebook && <p><a href={sanitizeHref(site.data.facebook)}>WADA on Facebook</a></p>}</section>}
+  <section class="wada-section" id="in-memory"><h2>Remembering our members</h2><div class="wada-grid">{ordered(memorials.entries).map(member => <article class="wada-card"><h3 {...member.edit.name}>{member.data.name}</h3>{member.data.died && <p>{member.data.died}</p>}{member.data.tribute && <PortableText value={member.data.tribute} />}</article>)}</div></section>
+</WadaLayout>

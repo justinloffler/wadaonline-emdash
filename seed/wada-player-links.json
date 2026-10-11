@@ -1,0 +1,1304 @@
+[
+  {
+    "statsSlug": "2026-winter-div-1-r10-aaron-halliday-143-hellraisers",
+    "playerSlug": "aaron-halliday-e0903231401c",
+    "sourceName": "Aaron Halliday",
+    "sourceRegistration": "143"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-adam-sumner-464-hellraisers",
+    "playerSlug": "adam-sumner-39eafecc8db7",
+    "sourceName": "Adam Sumner",
+    "sourceRegistration": "464"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-adam-sumner-464-rsl-no-darts",
+    "playerSlug": "adam-sumner-39eafecc8db7",
+    "sourceName": "Adam Sumner",
+    "sourceRegistration": "464"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-adrian-campbell-463-hellraisers",
+    "playerSlug": "adrian-campbell-c8a97967f573",
+    "sourceName": "Adrian Campbell",
+    "sourceRegistration": "463"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-alan-harrup-445-hellraisers",
+    "playerSlug": "alan-harrup-1513f0625af3",
+    "sourceName": "Alan Harrup",
+    "sourceRegistration": "445"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-ben-fuller-473-wee-willies",
+    "playerSlug": "ben-fuller-d4d6fecec3f2",
+    "sourceName": "Ben Fuller",
+    "sourceRegistration": "473"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-bickle-bickle-359-live-by-the-dart",
+    "playerSlug": "bickle-bickle-8142b2a54772",
+    "sourceName": "Bickle Bickle",
+    "sourceRegistration": "359"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-brad-dedrick-238-wee-willies",
+    "playerSlug": "brad-dedrick-4a1dc594a365",
+    "sourceName": "Brad Dedrick",
+    "sourceRegistration": "238"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-brodie-phillips-197-saca-cats",
+    "playerSlug": "brodie-phillips-e11c35f9a686",
+    "sourceName": "Brodie Phillips",
+    "sourceRegistration": "197"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-bryan-kennedy-146-hellraisers",
+    "playerSlug": "bryan-kennedy-733712dcc4fd",
+    "sourceName": "Bryan Kennedy",
+    "sourceRegistration": "146"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-bryan-stock-460-live-by-the-dart",
+    "playerSlug": "bryan-stock-a38ab90355b4",
+    "sourceName": "Bryan Stock",
+    "sourceRegistration": "460"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-courtney-bottrell-99-live-by-the-dart",
+    "playerSlug": "courtney-bottrell-c0e9da772abd",
+    "sourceName": "Courtney Bottrell",
+    "sourceRegistration": "99"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-curtis-ding-454-allnighters",
+    "playerSlug": "curtis-ding-2a13417030b2",
+    "sourceName": "Curtis Ding",
+    "sourceRegistration": "454"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-danny-vann-527-wee-willies",
+    "playerSlug": "danny-vann-d3e09ab77a79",
+    "sourceName": "Danny Vann",
+    "sourceRegistration": "527"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-darren-lovell-occ-allnighters",
+    "playerSlug": "darren-lovell-78dbaefa1ad6",
+    "sourceName": "Darren Lovell",
+    "sourceRegistration": "OCC"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-dave-hall-468-hellraisers",
+    "playerSlug": "dave-hall-86a7ba35b3ed",
+    "sourceName": "Dave Hall",
+    "sourceRegistration": "468"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-ethan-bray-322-live-by-the-dart",
+    "playerSlug": "ethan-bray-48ceafbbac1c",
+    "sourceName": "Ethan Bray",
+    "sourceRegistration": "322"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-finian-roche-198-saca-cats",
+    "playerSlug": "finian-roche-3942662353f0",
+    "sourceName": "Finian Roche",
+    "sourceRegistration": "198"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-gary-kennedy-160-hellraisers",
+    "playerSlug": "gary-kennedy-2879e72baa9e",
+    "sourceName": "Gary Kennedy",
+    "sourceRegistration": "160"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-geoff-matthews-368-dart-vaders",
+    "playerSlug": "geoff-matthews-ae965aa125d6",
+    "sourceName": "Geoff Matthews",
+    "sourceRegistration": "368"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-hamish-height-199-saca-cats",
+    "playerSlug": "hamish-height-fb0a4a74015c",
+    "sourceName": "Hamish Height",
+    "sourceRegistration": "199"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-jack-richardson-189-saca-cats",
+    "playerSlug": "jack-richardson-8f24fa4b5339",
+    "sourceName": "Jack Richardson",
+    "sourceRegistration": "189"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-jackson-raftery-462-saca-cats",
+    "playerSlug": "jackson-raftery-c04b1560e184",
+    "sourceName": "Jackson Raftery",
+    "sourceRegistration": "462"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-jacob-phillips-181-saca-cats",
+    "playerSlug": "jacob-phillips-090156f4ad14",
+    "sourceName": "Jacob Phillips",
+    "sourceRegistration": "181"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-jacques-wadey-288-saca-cats",
+    "playerSlug": "jacques-wadey-4be08f0f5438",
+    "sourceName": "Jacques Wadey",
+    "sourceRegistration": "288"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-jerry-jadormio-531-dart-vaders",
+    "playerSlug": "jerry-jadormio-0c39ae6a1af8",
+    "sourceName": "Jerry Jadormio",
+    "sourceRegistration": "531"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-john-blunt-435-dart-vaders",
+    "playerSlug": "john-blunt-8a2fdf320318",
+    "sourceName": "John Blunt",
+    "sourceRegistration": "435"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-john-gallagher-91-dart-vaders",
+    "playerSlug": "john-gallagher-547ce431df90",
+    "sourceName": "John Gallagher",
+    "sourceRegistration": "91"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-josh-hunt-173-saca-cats",
+    "playerSlug": "josh-hunt-11c1206fa037",
+    "sourceName": "Josh Hunt",
+    "sourceRegistration": "173"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-kelvin-grainger-471-allnighters",
+    "playerSlug": "kelvin-grainger-dcced5ac7b27",
+    "sourceName": "Kelvin Grainger",
+    "sourceRegistration": "471"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-kevin-mcmahon-431-hellraisers",
+    "playerSlug": "kevin-mcmahon-efc03cdef0b7",
+    "sourceName": "Kevin McMahon",
+    "sourceRegistration": "431"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-lachlan-stock-455-live-by-the-dart",
+    "playerSlug": "lachlan-stock-ea8d4946420e",
+    "sourceName": "Lachlan Stock",
+    "sourceRegistration": "455"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-lindo-wubbolts-310-allnighters",
+    "playerSlug": "lindo-wubbolts-cc2654ed882e",
+    "sourceName": "Lindo Wubbolts",
+    "sourceRegistration": "310"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-luke-hall-140-hellraisers",
+    "playerSlug": "luke-hall-ed2bce5cf3d2",
+    "sourceName": "Luke Hall",
+    "sourceRegistration": "140"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-mark-jensen-66-wee-willies",
+    "playerSlug": "mark-jensen-cfaa7942dc18",
+    "sourceName": "Mark Jensen",
+    "sourceRegistration": "66"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-martin-ding-483-allnighters",
+    "playerSlug": "martin-ding-b3126b5d879c",
+    "sourceName": "Martin Ding",
+    "sourceRegistration": "483"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-matt-crowell-217-live-by-the-dart",
+    "playerSlug": "matt-crowell-742eed7432eb",
+    "sourceName": "Matt Crowell",
+    "sourceRegistration": "217"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-palle-muus-213-allnighters",
+    "playerSlug": "palle-muus-6f8b6ffcfc31",
+    "sourceName": "Palle Muus",
+    "sourceRegistration": "213"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-paul-bell-498-dart-vaders",
+    "playerSlug": "paul-bell-f2dd4098ae55",
+    "sourceName": "Paul Bell",
+    "sourceRegistration": "498"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-paul-charlton-321-live-by-the-dart",
+    "playerSlug": "paul-charlton-2b6c6f67fb08",
+    "sourceName": "Paul Charlton",
+    "sourceRegistration": "321"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-paul-linke-363-live-by-the-dart",
+    "playerSlug": "paul-linke-7441f35587a2",
+    "sourceName": "Paul Linke",
+    "sourceRegistration": "363"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-peter-russo-432-dart-vaders",
+    "playerSlug": "peter-russo-e45124b1e7c9",
+    "sourceName": "Peter Russo",
+    "sourceRegistration": "432"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-pierre-nel-338-live-by-the-dart",
+    "playerSlug": "pierre-nel-5c209a7c0cf9",
+    "sourceName": "Pierre Nel",
+    "sourceRegistration": "338"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-rob-taylor-298-allnighters",
+    "playerSlug": "rob-taylor-2ee309ec9a3a",
+    "sourceName": "Rob Taylor",
+    "sourceRegistration": "298"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-robert-fleming-266-wee-willies",
+    "playerSlug": "robert-fleming-904bb8959cc4",
+    "sourceName": "Robert Fleming",
+    "sourceRegistration": "266"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-rodger-lingbanan-519-dart-vaders",
+    "playerSlug": "rodger-lingbanan-9071e790f9a0",
+    "sourceName": "Rodger Lingbanan",
+    "sourceRegistration": "519"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-ron-jensen-75-wee-willies",
+    "playerSlug": "ron-jensen-f1ec617b9115",
+    "sourceName": "Ron Jensen",
+    "sourceRegistration": "75"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-scott-carrigan-324-allnighters",
+    "playerSlug": "scott-carrigan-50238b5cf26c",
+    "sourceName": "Scott Carrigan",
+    "sourceRegistration": "324"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-sean-burden-666-wee-willies",
+    "playerSlug": "sean-burden-d59eeeaab068",
+    "sourceName": "Sean Burden",
+    "sourceRegistration": "666"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-shane-below-425-wee-willies",
+    "playerSlug": "shane-below-d7df9abe9d3f",
+    "sourceName": "Shane Below",
+    "sourceRegistration": "425"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-taylor-hoffmann-occ-wee-willies",
+    "playerSlug": "taylor-hoffmann-5f00cce49221",
+    "sourceName": "Taylor Hoffmann",
+    "sourceRegistration": "OCC"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-william-hunt-196-saca-cats",
+    "playerSlug": "william-hunt-310f22c2e749",
+    "sourceName": "William Hunt",
+    "sourceRegistration": "196"
+  },
+  {
+    "statsSlug": "2026-winter-div-1-r10-zac-de-vries-174-allnighters",
+    "playerSlug": "zac-de-vries-c80ab58c20a8",
+    "sourceName": "Zac De Vries",
+    "sourceRegistration": "174"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-aaron-maurici-295-full-of-bull",
+    "playerSlug": "aaron-maurici-6ea888c9ad87",
+    "sourceName": "Aaron Maurici",
+    "sourceRegistration": "295"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-aaron-raymond-503-full-of-bull",
+    "playerSlug": "aaron-raymond-eaef2fb51526",
+    "sourceName": "Aaron Raymond",
+    "sourceRegistration": "503"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-alan-wilden-451-rsl-dart-diggers",
+    "playerSlug": "alan-wilden-75be0acff9cc",
+    "sourceName": "Alan Wilden",
+    "sourceRegistration": "451"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-andrew-engelhardt-299-west-lakes-wizards",
+    "playerSlug": "andrew-engelhardt-32d14ea64f76",
+    "sourceName": "Andrew Engelhardt",
+    "sourceRegistration": "299"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-andrew-kemp-270-drifters",
+    "playerSlug": "andrew-kemp-13c73d32c4dc",
+    "sourceName": "Andrew Kemp",
+    "sourceRegistration": "270"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-anthony-ciccarello-371-drifters",
+    "playerSlug": "anthony-ciccarello-c2943b5312c4",
+    "sourceName": "Anthony Ciccarello",
+    "sourceRegistration": "371"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-bob-budarick-206-beach-boys",
+    "playerSlug": "bob-budarick-fc11033b759c",
+    "sourceName": "Bob Budarick",
+    "sourceRegistration": "206"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-brenton-durham-42-catters",
+    "playerSlug": "brenton-durham-1574636bbd2a",
+    "sourceName": "Brenton Durham",
+    "sourceRegistration": "42"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-brenton-mcrea-428-catters",
+    "playerSlug": "brenton-mcrea-d11259c947d6",
+    "sourceName": "Brenton McRea",
+    "sourceRegistration": "428"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-brian-curtis-478-west-lakes-wizards",
+    "playerSlug": "brian-curtis-2578dea67f3d",
+    "sourceName": "Brian Curtis",
+    "sourceRegistration": "478"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-chelsea-smith-occ-catters",
+    "playerSlug": "chelsea-smith-34b2edadcf08",
+    "sourceName": "Chelsea Smith",
+    "sourceRegistration": "OCC"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-chris-cocking-164-beach-boys",
+    "playerSlug": "chris-cocking-1fbb4158cbde",
+    "sourceName": "Chris Cocking",
+    "sourceRegistration": "164"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-chris-gilbert-457-rsl-dart-diggers",
+    "playerSlug": "chris-gilbert-7e9a61a243dd",
+    "sourceName": "Chris Gilbert",
+    "sourceRegistration": "457"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-chris-small-218-west-lakes-wizards",
+    "playerSlug": "chris-small-0c78d2d7381a",
+    "sourceName": "Chris Small",
+    "sourceRegistration": "218"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-clinton-smith-470-west-lakes-wizards",
+    "playerSlug": "clinton-smith-376fe2d6de1c",
+    "sourceName": "Clinton Smith",
+    "sourceRegistration": "470"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-cooper-wall-443-beach-boys",
+    "playerSlug": "cooper-wall-2faaf7019d9e",
+    "sourceName": "Cooper Wall",
+    "sourceRegistration": "443"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-daniele-nardelli-327-west-lakes-wizards",
+    "playerSlug": "daniele-nardelli-3ccaec441750",
+    "sourceName": "Daniele Nardelli",
+    "sourceRegistration": "327"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-darren-kearns-474-catters",
+    "playerSlug": "darren-kearns-ce56b2996231",
+    "sourceName": "Darren Kearns",
+    "sourceRegistration": "474"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-darren-kelsey-410-rsl-dart-diggers",
+    "playerSlug": "darren-kelsey-df65245fbd44",
+    "sourceName": "Darren Kelsey",
+    "sourceRegistration": "410"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-david-mclachlan-532-catters",
+    "playerSlug": "david-mclachlan-b253dd008f01",
+    "sourceName": "David McLachlan",
+    "sourceRegistration": "532"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-david-petherbridge-71-full-of-bull",
+    "playerSlug": "david-petherbridge-13963dd1f4d6",
+    "sourceName": "David Petherbridge",
+    "sourceRegistration": "71"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-derek-smith-158-west-lakes-wizards",
+    "playerSlug": "derek-smith-b6acec5ca9e4",
+    "sourceName": "Derek Smith",
+    "sourceRegistration": "158"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-dwayne-playfair-416-beach-boys",
+    "playerSlug": "dwayne-playfair-6b5778831eb7",
+    "sourceName": "Dwayne Playfair",
+    "sourceRegistration": "416"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-evelyn-hopper-354-full-of-bull",
+    "playerSlug": "evelyn-hopper-c53d4cedee8d",
+    "sourceName": "Evelyn Hopper",
+    "sourceRegistration": "354"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-gary-wybrew-477-rsl-dart-diggers",
+    "playerSlug": "gary-wybrew-7c49d3b71167",
+    "sourceName": "Gary Wybrew",
+    "sourceRegistration": "477"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-geoff-shiell-465-catters",
+    "playerSlug": "geoff-shiell-2dbdec70afb0",
+    "sourceName": "Geoff Shiell",
+    "sourceRegistration": "465"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-john-a-smith-85-catters",
+    "playerSlug": "john-a-smith-de13cb7444a3",
+    "sourceName": "John A Smith",
+    "sourceRegistration": "85"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-john-eade-408-beach-boys",
+    "playerSlug": "john-eade-26d7ffcb1265",
+    "sourceName": "John Eade",
+    "sourceRegistration": "408"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-kayla-jeffery-occ-west-lakes-wizards",
+    "playerSlug": "kayla-jeffery-cc04a5fc8062",
+    "sourceName": "Kayla Jeffery",
+    "sourceRegistration": "OCC"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-kelly-roberts-191-rsl-dart-diggers",
+    "playerSlug": "kelly-roberts-672622e7e039",
+    "sourceName": "Kelly Roberts",
+    "sourceRegistration": "191"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-lachlan-stopa-175-drifters",
+    "playerSlug": "lachlan-stopa-fe9e7f38cbe5",
+    "sourceName": "Lachlan Stopa",
+    "sourceRegistration": "175"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-liam-gavin-459-drifters",
+    "playerSlug": "liam-gavin-7e591ebefa60",
+    "sourceName": "Liam Gavin",
+    "sourceRegistration": "459"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-lyn-petherbridge-67-full-of-bull",
+    "playerSlug": "lyn-petherbridge-5b0b75abf90e",
+    "sourceName": "Lyn Petherbridge",
+    "sourceRegistration": "67"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-mark-roberts-86-rsl-dart-diggers",
+    "playerSlug": "mark-roberts-57270030de25",
+    "sourceName": "Mark Roberts",
+    "sourceRegistration": "86"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-matt-manoel-436-drifters",
+    "playerSlug": "matt-manoel-8b44a8abccfc",
+    "sourceName": "Matt Manoel",
+    "sourceRegistration": "436"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-michael-ronan-346-rsl-dart-diggers",
+    "playerSlug": "michael-ronan-34ed1e9c42ee",
+    "sourceName": "Michael Ronan",
+    "sourceRegistration": "346"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-michael-smith-426-catters",
+    "playerSlug": "michael-smith-d09175496744",
+    "sourceName": "Michael Smith",
+    "sourceRegistration": "426"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-michael-van-mook-297-catters",
+    "playerSlug": "michael-van-mook-3ef463d3cad6",
+    "sourceName": "Michael Van Mook",
+    "sourceRegistration": "297"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-narelle-king-180-beach-boys",
+    "playerSlug": "narelle-king-b1e6425df5f6",
+    "sourceName": "Narelle King",
+    "sourceRegistration": "180"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-paul-barnes-406-west-lakes-wizards",
+    "playerSlug": "paul-barnes-b27ab0b91cb1",
+    "sourceName": "Paul Barnes",
+    "sourceRegistration": "406"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-paul-brooks-439-drifters",
+    "playerSlug": "paul-brooks-152886f9ad61",
+    "sourceName": "Paul Brooks",
+    "sourceRegistration": "439"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-paul-cosgrove-169-beach-boys",
+    "playerSlug": "paul-cosgrove-6575ecb5d9ee",
+    "sourceName": "Paul Cosgrove",
+    "sourceRegistration": "169"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-paul-sayner-273-beach-boys",
+    "playerSlug": "paul-sayner-2029131896eb",
+    "sourceName": "Paul Sayner",
+    "sourceRegistration": "273"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-phillip-jeffery-246-west-lakes-wizards",
+    "playerSlug": "phillip-jeffery-0cf45775866c",
+    "sourceName": "Phillip Jeffery",
+    "sourceRegistration": "246"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-ray-maricic-28-catters",
+    "playerSlug": "ray-maricic-810941225902",
+    "sourceName": "Ray Maricic",
+    "sourceRegistration": "28"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-ron-andrews-261-rsl-dart-diggers",
+    "playerSlug": "ron-andrews-eaec72d8c866",
+    "sourceName": "Ron Andrews",
+    "sourceRegistration": "261"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-russell-knight-476-rsl-dart-diggers",
+    "playerSlug": "russell-knight-ee4a5b52a3ea",
+    "sourceName": "Russell Knight",
+    "sourceRegistration": "476"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-sally-anne-kutcher-29-full-of-bull",
+    "playerSlug": "sally-anne-kutcher-83d1850bdaf8",
+    "sourceName": "Sally-Anne Kutcher",
+    "sourceRegistration": "29"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-stephen-ditton-144-catters",
+    "playerSlug": "stephen-ditton-0b42cd47710a",
+    "sourceName": "Stephen Ditton",
+    "sourceRegistration": "144"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-steve-jones-337-west-lakes-wizards",
+    "playerSlug": "steve-jones-76e18d6dfc57",
+    "sourceName": "Steve Jones",
+    "sourceRegistration": "337"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-steven-lord-504-beach-boys",
+    "playerSlug": "steven-lord-e837b82d57e4",
+    "sourceName": "Steven Lord",
+    "sourceRegistration": "504"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-stewart-anderson-202-drifters",
+    "playerSlug": "stewart-anderson-516ecc2e9335",
+    "sourceName": "Stewart Anderson",
+    "sourceRegistration": "202"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-todd-chynoweth-437-drifters",
+    "playerSlug": "todd-chynoweth-1d94f32f2feb",
+    "sourceName": "Todd Chynoweth",
+    "sourceRegistration": "437"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-tym-gurd-occ-rsl-dart-diggers",
+    "playerSlug": "tym-gurd-3190f15519b1",
+    "sourceName": "Tym Gurd",
+    "sourceRegistration": "OCC"
+  },
+  {
+    "statsSlug": "2026-winter-div-1a-r10-warran-bennett-497-full-of-bull",
+    "playerSlug": "warran-bennett-9b38ed9ca92e",
+    "sourceName": "Warran Bennett",
+    "sourceRegistration": "497"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-adam-totolas-350-dart-stormers",
+    "playerSlug": "adam-totolas-25be7ed6cfbc",
+    "sourceName": "Adam Totolas",
+    "sourceRegistration": "350"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-aidan-kosmanis-517-dart-stormers",
+    "playerSlug": "aidan-kosmanis-20b3380dfc42",
+    "sourceName": "Aidan Kosmanis",
+    "sourceRegistration": "517"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-allen-francis-23-dart-stormers",
+    "playerSlug": "allen-francis-4d82f12ede73",
+    "sourceName": "Allen Francis",
+    "sourceRegistration": "23"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-andrew-westbury-524-henley-sharks",
+    "playerSlug": "andrew-westbury-9b968c88162d",
+    "sourceName": "Andrew Westbury",
+    "sourceRegistration": "524"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-belinda-nettleton-occ-rsl-gunners",
+    "playerSlug": "belinda-nettleton-06510f28dea9",
+    "sourceName": "Belinda Nettleton",
+    "sourceRegistration": "OCC"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-ben-purvis-512-the-26ers",
+    "playerSlug": "ben-purvis-7c521b669468",
+    "sourceName": "Ben Purvis",
+    "sourceRegistration": "512"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-brett-ware-260-jugernauts",
+    "playerSlug": "brett-ware-5fe63532cc6b",
+    "sourceName": "Brett Ware",
+    "sourceRegistration": "260"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-brian-russell-129-rsl-gunners",
+    "playerSlug": "brian-russell-815c7a8ff6fd",
+    "sourceName": "Brian Russell",
+    "sourceRegistration": "129"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-chad-pilkington-501-rsl-gunners",
+    "playerSlug": "chad-pilkington-0b5d578b72d0",
+    "sourceName": "Chad Pilkington",
+    "sourceRegistration": "501"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-chad-wyatt-208-henley-sharks",
+    "playerSlug": "chad-wyatt-fb4b6850e29e",
+    "sourceName": "Chad Wyatt",
+    "sourceRegistration": "208"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-chona-calligaris-510-the-26ers",
+    "playerSlug": "chona-calligaris-537f825e3277",
+    "sourceName": "Chona Calligaris",
+    "sourceRegistration": "510"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-darren-fogarty-360-findon-ratpack",
+    "playerSlug": "darren-fogarty-5dca9f1d3136",
+    "sourceName": "Darren Fogarty",
+    "sourceRegistration": "360"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-david-froud-512-findon-ratpack",
+    "playerSlug": "david-froud-d748e32730a3",
+    "sourceName": "David Froud",
+    "sourceRegistration": "512"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-di-barnett-12-rsl-gunners",
+    "playerSlug": "di-barnett-42f7fe1714a8",
+    "sourceName": "Di Barnett",
+    "sourceRegistration": "12"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-evan-duff-222-henley-sharks",
+    "playerSlug": "evan-duff-bb9247c3f6db",
+    "sourceName": "Evan Duff",
+    "sourceRegistration": "222"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-gail-vahldieck-occ-rsl-gunners",
+    "playerSlug": "gail-vahldieck-04ac8ace2bd3",
+    "sourceName": "Gail Vahldieck",
+    "sourceRegistration": "OCC"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-gerry-paul-528-rsl-gunners",
+    "playerSlug": "gerry-paul-ff033197cbc4",
+    "sourceName": "Gerry Paul",
+    "sourceRegistration": "528"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-glyn-chidlow-221-findon-ratpack",
+    "playerSlug": "glyn-chidlow-8a1c6b00b67d",
+    "sourceName": "Glyn Chidlow",
+    "sourceRegistration": "221"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-grant-pearce-382-henley-sharks",
+    "playerSlug": "grant-pearce-6221faa534a0",
+    "sourceName": "Grant Pearce",
+    "sourceRegistration": "382"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-guido-calligaris-507-the-26ers",
+    "playerSlug": "guido-calligaris-ea280589b4bb",
+    "sourceName": "Guido Calligaris",
+    "sourceRegistration": "507"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-hugh-hocking-78-findon-ratpack",
+    "playerSlug": "hugh-hocking-84c59d498f40",
+    "sourceName": "Hugh Hocking",
+    "sourceRegistration": "78"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-ian-hockley-254-findon-ratpack",
+    "playerSlug": "ian-hockley-c8759791ed0e",
+    "sourceName": "Ian Hockley",
+    "sourceRegistration": "254"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-jason-bodley-188-jugernauts",
+    "playerSlug": "jason-bodley-fd6da4be4361",
+    "sourceName": "Jason Bodley",
+    "sourceRegistration": "188"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-jordan-lipson-529-dart-stormers",
+    "playerSlug": "jordan-lipson-6064cbd6287d",
+    "sourceName": "Jordan Lipson",
+    "sourceRegistration": "529"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-jun-pacho-511-the-26ers",
+    "playerSlug": "jun-pacho-87a4c62907ab",
+    "sourceName": "Jun Pacho",
+    "sourceRegistration": "511"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-karen-allen-305-rsl-gunners",
+    "playerSlug": "karen-allen-9b80ab52ee9e",
+    "sourceName": "Karen Allen",
+    "sourceRegistration": "305"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-ken-lawrence-48-rsl-gunners",
+    "playerSlug": "ken-lawrence-91a7342b4b55",
+    "sourceName": "Ken Lawrence",
+    "sourceRegistration": "48"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-leanda-freeman-occ-the-26ers",
+    "playerSlug": "leanda-freeman-cbb1ae21ba46",
+    "sourceName": "Leanda Freeman",
+    "sourceRegistration": "OCC"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-lee-ellis-82-jugernauts",
+    "playerSlug": "lee-ellis-977528fe0ea3",
+    "sourceName": "Lee Ellis",
+    "sourceRegistration": "82"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-lenard-faci-513-the-26ers",
+    "playerSlug": "lenard-faci-455753068683",
+    "sourceName": "Lenard Faci",
+    "sourceRegistration": "513"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-liz-jenkins-380-dart-stormers",
+    "playerSlug": "liz-jenkins-310cd12c1dbb",
+    "sourceName": "Liz Jenkins",
+    "sourceRegistration": "380"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-lyn-holmes-98-rsl-gunners",
+    "playerSlug": "lyn-holmes-a6e7c5857157",
+    "sourceName": "Lyn Holmes",
+    "sourceRegistration": "98"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-mal-myles-200-findon-ratpack",
+    "playerSlug": "mal-myles-b2215e2fea96",
+    "sourceName": "Mal Myles",
+    "sourceRegistration": "200"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-marc-webber-121-jugernauts",
+    "playerSlug": "marc-webber-a5a7bc7c4400",
+    "sourceName": "Marc Webber",
+    "sourceRegistration": "121"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-mark-daymon-137-findon-ratpack",
+    "playerSlug": "mark-daymon-bbbdc543f7a6",
+    "sourceName": "Mark Daymon",
+    "sourceRegistration": "137"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-mark-manning-269-jugernauts",
+    "playerSlug": "mark-manning-adcb7b1e8d88",
+    "sourceName": "Mark Manning",
+    "sourceRegistration": "269"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-marty-strozik-520-dart-stormers",
+    "playerSlug": "marty-strozik-c826cd2746e6",
+    "sourceName": "Marty Strozik",
+    "sourceRegistration": "520"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-matt-baker-514-the-26ers",
+    "playerSlug": "matt-baker-9603cb532bf5",
+    "sourceName": "Matt Baker",
+    "sourceRegistration": "514"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-matt-tonkins-occ-jugernauts",
+    "playerSlug": "matt-tonkins-c6b657218aa9",
+    "sourceName": "Matt Tonkins",
+    "sourceRegistration": "OCC"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-nick-charlesworth-occ-jugernauts",
+    "playerSlug": "nick-charlesworth-6cd584ffbbfd",
+    "sourceName": "Nick Charlesworth",
+    "sourceRegistration": "OCC"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-nick-ginever-152-jugernauts",
+    "playerSlug": "nick-ginever-68d6e370d165",
+    "sourceName": "Nick Ginever",
+    "sourceRegistration": "152"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-olivia-manzie-509-the-26ers",
+    "playerSlug": "olivia-manzie-c255ab504605",
+    "sourceName": "Olivia Manzie",
+    "sourceRegistration": "509"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-pat-o-malley-262-findon-ratpack",
+    "playerSlug": "pat-o-malley-2730ccc59898",
+    "sourceName": "Pat O'Malley",
+    "sourceRegistration": "262"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-paul-haines-77-findon-ratpack",
+    "playerSlug": "paul-haines-ca113d89592c",
+    "sourceName": "Paul Haines",
+    "sourceRegistration": "77"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-paul-templer-316-henley-sharks",
+    "playerSlug": "paul-templer-1e7edd982cc2",
+    "sourceName": "Paul Templer",
+    "sourceRegistration": "316"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-peter-ware-101-jugernauts",
+    "playerSlug": "peter-ware-ff82cfdf54ca",
+    "sourceName": "Peter Ware",
+    "sourceRegistration": "101"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-riley-hawthorn-145-dart-stormers",
+    "playerSlug": "riley-hawthorn-462dcd603d69",
+    "sourceName": "Riley Hawthorn",
+    "sourceRegistration": "145"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-rod-laing-301-henley-sharks",
+    "playerSlug": "rod-laing-9473503cd447",
+    "sourceName": "Rod Laing",
+    "sourceRegistration": "301"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-rodger-palmrose-277-henley-sharks",
+    "playerSlug": "rodger-palmrose-57f24582e707",
+    "sourceName": "Rodger Palmrose",
+    "sourceRegistration": "277"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-ros-palmrose-278-henley-sharks",
+    "playerSlug": "ros-palmrose-f67a55c5d383",
+    "sourceName": "Ros Palmrose",
+    "sourceRegistration": "278"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-sam-calligaris-506-the-26ers",
+    "playerSlug": "sam-calligaris-776f14e8de8b",
+    "sourceName": "Sam Calligaris",
+    "sourceRegistration": "506"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-shane-spackman-24-rsl-gunners",
+    "playerSlug": "shane-spackman-d25334414759",
+    "sourceName": "Shane Spackman",
+    "sourceRegistration": "24"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-sharan-totolas-480-dart-stormers",
+    "playerSlug": "sharan-totolas-0ccefdcd5770",
+    "sourceName": "Sharan Totolas",
+    "sourceRegistration": "480"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-shaun-prior-508-the-26ers",
+    "playerSlug": "shaun-prior-e7db4952c4b1",
+    "sourceName": "Shaun Prior",
+    "sourceRegistration": "508"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-stelios-neocleous-43-henley-sharks",
+    "playerSlug": "stelios-neocleous-84464b8842c5",
+    "sourceName": "Stelios Neocleous",
+    "sourceRegistration": "43"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-tom-nerris-458-rsl-gunners",
+    "playerSlug": "tom-nerris-51c6e0f11946",
+    "sourceName": "Tom Nerris",
+    "sourceRegistration": "458"
+  },
+  {
+    "statsSlug": "2026-winter-div-2-r10-travis-wyatt-116-henley-sharks",
+    "playerSlug": "travis-wyatt-f3141adefc09",
+    "sourceName": "Travis Wyatt",
+    "sourceRegistration": "116"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-adam-ford-141-rsl-no-darts",
+    "playerSlug": "adam-ford-57b38556a115",
+    "sourceName": "Adam Ford",
+    "sourceRegistration": "141"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-alan-johnson-523-project-zeus",
+    "playerSlug": "alan-johnson-2706e02c5ba6",
+    "sourceName": "Alan Johnson",
+    "sourceRegistration": "523"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-alister-mccallum-447-heres-hope-inn",
+    "playerSlug": "alister-mccallum-ab59efe80e81",
+    "sourceName": "Alister McCallum",
+    "sourceRegistration": "447"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-andrew-herewane-272-bobs-chicks",
+    "playerSlug": "andrew-herewane-4280590d52a0",
+    "sourceName": "Andrew Herewane",
+    "sourceRegistration": "272"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-barry-lowry-30-bobs-chicks",
+    "playerSlug": "barry-lowry-2f4def97ecbe",
+    "sourceName": "Barry Lowry",
+    "sourceRegistration": "30"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-basil-demetriou-333-bobs-chicks",
+    "playerSlug": "basil-demetriou-2abbafd720eb",
+    "sourceName": "Basil Demetriou",
+    "sourceRegistration": "333"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-belinda-mitchell-211-rsl-no-rules",
+    "playerSlug": "belinda-mitchell-8b17e8a51ad1",
+    "sourceName": "Belinda Mitchell",
+    "sourceRegistration": "211"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-bob-flaherty-370-bobs-chicks",
+    "playerSlug": "bob-flaherty-bf964b07fe76",
+    "sourceName": "Bob Flaherty",
+    "sourceRegistration": "370"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-cassandra-rust-461-rsl-no-rules",
+    "playerSlug": "cassandra-rust-1d04d567560c",
+    "sourceName": "Cassandra Rust",
+    "sourceRegistration": "461"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-cheryl-mccall-33-bobs-chicks",
+    "playerSlug": "cheryl-mccall-ffb1e25a66bd",
+    "sourceName": "Cheryl McCall",
+    "sourceRegistration": "33"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-cheryl-weeden-353-heres-hope-inn",
+    "playerSlug": "cheryl-weeden-c53eaf240deb",
+    "sourceName": "Cheryl Weeden",
+    "sourceRegistration": "353"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-chris-lennon-280-rsl-no-rules",
+    "playerSlug": "chris-lennon-3b8a04f3b584",
+    "sourceName": "Chris Lennon",
+    "sourceRegistration": "280"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-david-west-127-darty-rotten-scoundrels",
+    "playerSlug": "david-west-782d5f8141ef",
+    "sourceName": "David West",
+    "sourceRegistration": "127"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-denny-godefroy-59-rsl-no-rules",
+    "playerSlug": "denny-godefroy-0399b21a3c48",
+    "sourceName": "Denny Godefroy",
+    "sourceRegistration": "59"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-dylan-hoare-377-rsl-no-darts",
+    "playerSlug": "dylan-hoare-48ecda6d7999",
+    "sourceName": "Dylan Hoare",
+    "sourceRegistration": "377"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-eugene-lazo-reitz-223-rsl-no-darts",
+    "playerSlug": "eugene-lazo-reitz-42d98587d76c",
+    "sourceName": "Eugene Lazo Reitz",
+    "sourceRegistration": "223"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-gary-brooks-240-heres-hope-inn",
+    "playerSlug": "gary-brooks-d8c76934edf3",
+    "sourceName": "Gary Brooks",
+    "sourceRegistration": "240"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-gary-davis-105-heres-hope-inn",
+    "playerSlug": "gary-davis-48efd88e171d",
+    "sourceName": "Gary Davis",
+    "sourceRegistration": "105"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-ian-sutton-53-darty-rotten-scoundrels",
+    "playerSlug": "ian-sutton-676890b09aa3",
+    "sourceName": "Ian Sutton",
+    "sourceRegistration": "53"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-jack-ducker-449-rsl-no-darts",
+    "playerSlug": "jack-ducker-67960266701d",
+    "sourceName": "Jack Ducker",
+    "sourceRegistration": "449"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-jack-hoare-occ-rsl-no-darts",
+    "playerSlug": "jack-hoare-a8e4552dc85b",
+    "sourceName": "Jack Hoare",
+    "sourceRegistration": "OCC"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-jack-wilson-533-rsl-no-darts",
+    "playerSlug": "jack-wilson-11e542e31171",
+    "sourceName": "Jack Wilson",
+    "sourceRegistration": "533"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-jenine-myers-314-rsl-no-rules",
+    "playerSlug": "jenine-myers-d5b541dd912f",
+    "sourceName": "Jenine Myers",
+    "sourceRegistration": "314"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-jess-hoare-526-rsl-no-darts",
+    "playerSlug": "jess-hoare-07dd170793d6",
+    "sourceName": "Jess Hoare",
+    "sourceRegistration": "526"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-joel-harvey-friel-487-project-zeus",
+    "playerSlug": "joel-harvey-friel-64b9f1612461",
+    "sourceName": "Joel Harvey-Friel",
+    "sourceRegistration": "487"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-john-harris-367-darty-rotten-scoundrels",
+    "playerSlug": "john-harris-a833d70a4e1d",
+    "sourceName": "John Harris",
+    "sourceRegistration": "367"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-john-perriman-442-darty-rotten-scoundrels",
+    "playerSlug": "john-perriman-3ea6991c7e97",
+    "sourceName": "John Perriman",
+    "sourceRegistration": "442"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-julie-goold-125-heres-hope-inn",
+    "playerSlug": "julie-goold-ea43986f6345",
+    "sourceName": "Julie Goold",
+    "sourceRegistration": "125"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-justin-baldwin-466-darty-rotten-scoundrels",
+    "playerSlug": "justin-baldwin-de0fc9126fa6",
+    "sourceName": "Justin Baldwin",
+    "sourceRegistration": "466"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-karen-harvey-205-heres-hope-inn",
+    "playerSlug": "karen-harvey-ae70c093deba",
+    "sourceName": "Karen Harvey",
+    "sourceRegistration": "205"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-kayne-polomka-215-rsl-no-rules",
+    "playerSlug": "kayne-polomka-ee7a99f28e0a",
+    "sourceName": "Kayne Polomka",
+    "sourceRegistration": "215"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-leeane-millard-142-bobs-chicks",
+    "playerSlug": "leeane-millard-66cbc29dd2f3",
+    "sourceName": "Leeane Millard",
+    "sourceRegistration": "142"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-li-mastrocinque-495-project-zeus",
+    "playerSlug": "li-mastrocinque-587018270572",
+    "sourceName": "Li Mastrocinque",
+    "sourceRegistration": "495"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-luka-kolundzija-488-project-zeus",
+    "playerSlug": "luka-kolundzija-287fa8e9e412",
+    "sourceName": "Luka Kolundzija",
+    "sourceRegistration": "488"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-marg-mccallum-258-heres-hope-inn",
+    "playerSlug": "marg-mccallum-e27d61f2fad2",
+    "sourceName": "Marg McCallum",
+    "sourceRegistration": "258"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-maria-lesage-226-rsl-no-rules",
+    "playerSlug": "maria-lesage-edaf7cfa46eb",
+    "sourceName": "Maria Lesage",
+    "sourceRegistration": "226"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-mary-aay-117-darty-rotten-scoundrels",
+    "playerSlug": "mary-aay-eac080d4e611",
+    "sourceName": "Mary Aay",
+    "sourceRegistration": "117"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-neil-millard-10-bobs-chicks",
+    "playerSlug": "neil-millard-2b987d4b64b4",
+    "sourceName": "Neil Millard",
+    "sourceRegistration": "10"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-pauline-mcdonough-289-heres-hope-inn",
+    "playerSlug": "pauline-mcdonough-90cfe00425a0",
+    "sourceName": "Pauline McDonough",
+    "sourceRegistration": "289"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-peter-bouzalas-490-project-zeus",
+    "playerSlug": "peter-bouzalas-32bc9d306c20",
+    "sourceName": "Peter Bouzalas",
+    "sourceRegistration": "490"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-peter-katsambis-496-project-zeus",
+    "playerSlug": "peter-katsambis-9a53a7137f82",
+    "sourceName": "Peter Katsambis",
+    "sourceRegistration": "496"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-peter-mcvicars-159-bobs-chicks",
+    "playerSlug": "peter-mcvicars-60f34f056568",
+    "sourceName": "Peter McVicars",
+    "sourceRegistration": "159"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-ray-polomka-225-rsl-no-rules",
+    "playerSlug": "ray-polomka-13d768e82cc5",
+    "sourceName": "Ray Polomka",
+    "sourceRegistration": "225"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-sally-allen-237-heres-hope-inn",
+    "playerSlug": "sally-allen-816824131ba3",
+    "sourceName": "Sally Allen",
+    "sourceRegistration": "237"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-sava-hatzi-489-project-zeus",
+    "playerSlug": "sava-hatzi-cd6f936889eb",
+    "sourceName": "Sava Hatzi",
+    "sourceRegistration": "489"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-sotiros-vassilious-530-darty-rotten-scoundrels",
+    "playerSlug": "sotiros-vassilious-eb443b41b7a6",
+    "sourceName": "Sotiros Vassilious",
+    "sourceRegistration": "530"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-talon-keimeier-518-rsl-no-darts",
+    "playerSlug": "talon-keimeier-27c733638ff4",
+    "sourceName": "Talon Keimeier",
+    "sourceRegistration": "518"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-tam-ribbins-317-rsl-no-rules",
+    "playerSlug": "tam-ribbins-f384f62a3927",
+    "sourceName": "Tam Ribbins",
+    "sourceRegistration": "317"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-taylah-hoare-429-rsl-no-darts",
+    "playerSlug": "taylah-hoare-759214964494",
+    "sourceName": "Taylah Hoare",
+    "sourceRegistration": "429"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-tim-hickman-452-darty-rotten-scoundrels",
+    "playerSlug": "tim-hickman-447f21a04d32",
+    "sourceName": "Tim Hickman",
+    "sourceRegistration": "452"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-tim-martin-386-rsl-no-darts",
+    "playerSlug": "tim-martin-7918b98fe0f2",
+    "sourceName": "Tim Martin",
+    "sourceRegistration": "386"
+  },
+  {
+    "statsSlug": "2026-winter-div-2a-r10-val-west-55-darty-rotten-scoundrels",
+    "playerSlug": "val-west-c7fbeb9cd6df",
+    "sourceName": "Val West",
+    "sourceRegistration": "55"
+  }
+]

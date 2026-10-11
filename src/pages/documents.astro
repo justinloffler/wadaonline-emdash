@@ -1,0 +1,8 @@
+---
+import WadaLayout from '../layouts/WadaLayout.astro';
+import { getWadaCollection, getWadaProfile, documentHref } from '../lib/wada';
+const [result, profile] = await Promise.all([getWadaCollection('documents'), getWadaProfile()]);
+if (Astro.cache?.enabled) for (const hint of [...result.cacheHints, profile.cacheHint]) Astro.cache.set(hint);
+const groups = ['Rules', 'Governance', 'Policies', 'Results archive'].map(category => ({ category, entries: result.entries.filter(e => e.data.category === category).sort((a,b) => (a.data.display_order ?? 100) - (b.data.display_order ?? 100)) })).filter(group => group.entries.length);
+---
+<WadaLayout title="Documents"><header class="wada-heading"><p class="wada-kicker">Rules, governance &amp; resources</p><h1>Documents</h1></header>{groups.map(group => <section class="wada-section"><h2>{group.category}</h2><ul class="wada-documents">{group.entries.map(document => <li><div><h3 {...document.edit.title}>{document.data.title}</h3><p {...document.edit.description}>{document.data.description}</p></div>{documentHref(document.data.file, document.data.url) && <a href={documentHref(document.data.file, document.data.url)}>Download<span class="wada-sr-only"> {document.data.title}</span> →</a>}</li>)}</ul></section>)}{profile.entry?.data.eligibility_notice && <aside class="wada-card"><h2>For captains</h2><p>{profile.entry.data.eligibility_notice}</p></aside>}</WadaLayout>

@@ -1,0 +1,10 @@
+---
+import { Image, PortableText } from 'emdash/ui';
+import { sanitizeHref } from 'emdash';
+import WadaLayout from '../layouts/WadaLayout.astro';
+import DirectoryCard from '../components/wada/DirectoryCard.astro';
+import { getWadaCollection } from '../lib/wada';
+const result = await getWadaCollection('sponsors');
+if (Astro.cache?.enabled) for (const hint of result.cacheHints) Astro.cache.set(hint);
+---
+<WadaLayout title="Our sponsors"><header class="wada-heading"><p class="wada-kicker">Thank you to our sponsors</p><h1>Sponsor directory</h1></header><div class="wada-grid wada-section">{result.entries.sort((a,b) => (a.data.display_order ?? 100) - (b.data.display_order ?? 100)).map(sponsor => <DirectoryCard title={sponsor.data.name} eyebrow={sponsor.data.tier === 'major' ? 'Major sponsor' : sponsor.data.category}>{sponsor.data.logo && <Image image={sponsor.data.logo} />}<p>{sponsor.data.address}</p>{sponsor.data.phone && <p>Ph {sponsor.data.phone}</p>}{sponsor.data.url && <a href={sanitizeHref(sponsor.data.url)}>Visit website →</a>}{sponsor.data.content && <PortableText value={sponsor.data.content} />}</DirectoryCard>)}</div></WadaLayout>

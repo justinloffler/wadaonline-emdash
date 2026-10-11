@@ -1,0 +1,37 @@
+import { playersCollection, playerField } from './player-model.mjs';
+// Explicit field definitions are shared by the seed builder and import verifier.
+const f = (slug, label, type = 'string', extra = {}) => ({ slug, label, type, ...extra });
+const title = () => f('title', 'Title', 'string', { required: true, searchable: true });
+const name = () => f('name', 'Name', 'string', { required: true, searchable: true });
+const integer = (slug, label, min = 0) => f(slug, label, 'integer', { required: true, validation: { min } });
+const order = () => integer('display_order', 'Display order');
+const ref = (slug, label, targetCollection, multiple = false, required = true) => f(slug, label, 'reference', { required, validation: { targetCollection, multiple } });
+const select = (slug, label, options, required = true) => f(slug, label, 'select', { required, validation: { options } });
+const date = (slug, label, required = true) => f(slug, `${label} (YYYY-MM-DD)`, 'string', { required, validation: { pattern: '^\\d{4}-\\d{2}-\\d{2}$' } });
+const repeat = (slug, label, subFields) => f(slug, label, 'repeater', { validation: { subFields } });
+const strings = (slug, label, key = 'text') => repeat(slug, label, [f(key, label, 'text', { required: true })]);
+const seasonDivision = () => [ref('season', 'Season', 'seasons'), ref('division', 'Division', 'divisions')];
+const matchFields = () => [...seasonDivision(), integer('round', 'Round', 1), date('date', 'Match date'), ref('home', 'Home team', 'teams'), ref('away', 'Away team', 'teams')];
+let position = 0;
+const collection = (slug, label, labelSingular, fields, group = 'League') => ({ slug, label, labelSingular, group, sortOrder: position++, titleField: fields[0].slug, supports: ['drafts', 'revisions', 'search'], commentsEnabled: false, fields });
+export const competitionCollections = [
+  collection('divisions', 'Divisions', 'Division', [name(), f('short', 'Short name'), order(), integer('games_per_match', 'Games per match', 1), f('champion_shield', 'Championship shield'), f('premier_shield', 'Premiership shield')]),
+  collection('seasons', 'Seasons', 'Season', [name(), date('start', 'Start date'), date('end', 'End date'), select('season_status', 'Season status', ['upcoming', 'current', 'complete']), integer('total_rounds', 'Total rounds', 1), repeat('events', 'Calendar events', [f('date', 'Date (YYYY-MM-DD)'), f('title', 'Title', 'string', { required: true }), {slug:'kind',label:'Event kind',type:'select',options:['event','finals','grand-final','presentation']}, f('note', 'Note', 'text')])]),
+  collection('season_divisions', 'Season team lists', 'Season team list', [title(), ...seasonDivision(), ref('teams', 'Teams in this division', 'teams', true), order()]),
+  collection('league_settings', 'League rules', 'League rules', [title(), ref('current_season', 'Current season', 'seasons'), integer('points_for_win', 'Points for a win'), integer('points_for_draw', 'Points for a draw'), integer('min_games_for_average', 'Minimum games for average'), date('established', 'Association established')]),
+  collection('fixtures', 'Fixtures', 'Fixture', [title(), ...matchFields(), order()]),
+  collection('results', 'Match results', 'Match result', [title(), ...matchFields(), integer('home_score', 'Home score'), integer('away_score', 'Away score'), select('forfeit', 'Team that forfeited (opponent wins)', ['home', 'away'], false), f('note', 'Note', 'text'), order()]),
+  collection('ladders', 'Official ladder snapshots', 'Ladder snapshot', [title(), ...seasonDivision(), integer('round', 'As at round', 1), f('source', 'Source / reason for correction', 'text', { required: true })]),
+  collection('ladder_rows', 'Ladder standings', 'Ladder standing', [title(), ref('snapshot', 'Official ladder snapshot', 'ladders'), ref('team', 'Team', 'teams'), integer('played', 'Played'), integer('won', 'Won'), integer('points', 'Points'), integer('legs_for', 'Legs for'), integer('legs_against', 'Legs against'), order()]),
+  playersCollection,
+  collection('stats', 'Player averages', 'Player average', [f('name', 'Name as published', 'string', { required: true, searchable: true }), playerField, ...seasonDivision(), integer('round', 'As at round', 1), ref('team', 'Team', 'teams'), f('registration', 'Registration as published', 'string', { required: true }), integer('games', 'Games'), integer('score', 'Total score'), integer('darts', 'Total darts'), f('high_out', 'Highest checkout', 'integer', { required: true, validation: { min: 0, max: 170 } }), integer('tons_180', '180s this season'), integer('annual_180', '180s this year'), integer('lifetime_180', 'Lifetime 180s'), order()]),
+  collection('honours', 'Season honours', 'Season honours', [title(), order(), f('note', 'Note', 'text')], 'History'),
+  collection('honour_awards', 'Shield awards', 'Shield award', [title(), ref('honours', 'Season honours', 'honours'), f('division', 'Historic division name'), f('shield', 'Shield'), f('winner', 'Winner'), f('second', 'Runner-up'), strings('roster', 'Winning roster', 'name'), order()], 'History'),
+  collection('competitions', 'Cup competitions', 'Cup competition', [name(), order(), f('summary', 'Summary', 'text'), f('intro_title', 'Introduction heading'), f('intro', 'History / tribute', 'portableText'), ref('memorial', 'Memorial', 'memorials', false, false)], 'History'),
+  collection('competition_events', 'Cup event history', 'Cup event', [title(), ref('competition', 'Competition', 'competitions'), integer('year', 'Year', 1900), date('date', 'Event date', false), f('date_note', 'Date as published'), f('venue', 'Venue as published'), f('players', 'Number of players', 'integer', { validation: { min: 0 } }), f('cancelled', 'Cancelled', 'boolean'), f('report', 'Published report', 'portableText'), repeat('highlights', 'Awards and highlights', [f('label','Award'),f('value','Recipient / result','text')]), strings('notes','Notes'), order()], 'History'),
+  collection('competition_results', 'Cup event results', 'Cup event result', [title(), ref('event','Cup event','competition_events'), f('label','Division / group / round'), f('winner','Winner'), strings('runners_up','Runners-up','name'), f('score','Score as published'), strings('details','Details'), order()], 'History'),
+  collection('competition_teams', 'Cup event rosters', 'Cup event roster', [name(), ref('event','Cup event','competition_events'), f('label','Role / placing'), strings('players','Players','name'), order()], 'History'),
+  collection('competition_photos', 'Cup photos and draw sheets', 'Cup photo', [title(), ref('competition','Competition','competitions'), ref('event','Cup event (blank for introductory photos)','competition_events',false,false), f('image','Media library image','image'), f('alt','Alternative text','text',{required:true}), f('caption','Caption','text'), select('kind','Image kind',['photo','draw']), f('source_path','Original source asset path'), order()], 'History'),
+  collection('association_records', 'Association records', 'Association record', [title(), f('as_at','As at'), strings('top_all_time','All-time leaders','name')], 'History'),
+  collection('checkouts', 'Checkout charts', 'Checkout chart', [title(), f('note','Source / verification note','text'), f('verified','Verified by WADA','boolean'), repeat('rows','Checkout routes',[f('score','Score','integer',{required:true}),f('route','Dart sequence','string',{required:true})])], 'Resources'),
+];

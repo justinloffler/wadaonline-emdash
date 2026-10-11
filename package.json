@@ -1,0 +1,34 @@
+{
+  "name": "wadaonline",
+  "version": "0.0.3",
+  "private": true,
+  "type": "module",
+  "emdash": {
+    "label": "WADA",
+    "seed": "seed/seed.json"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "start": "node ./dist/server/entry.mjs",
+    "typecheck": "astro check",
+    "migrate:wada": "emdash seed seed/wada.json --on-conflict=skip",
+    "validate:wada": "emdash seed seed/wada.json --validate",
+    "migrate:competitions": "emdash seed seed/wada-competition.json --on-conflict=skip",
+    "validate:competitions": "emdash seed seed/wada-competition.json --validate",
+    "migrate:players": "node scripts/migrate-players.mjs",
+    "test:players": "node --test scripts/player-model.test.mjs"
+  },
+  "dependencies": {
+    "@astrojs/node": "^11.1.5",
+    "@astrojs/react": "^6.0.5",
+    "astro": "^7.3.2",
+    "emdash": "^1.0.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10"
+  }
+}

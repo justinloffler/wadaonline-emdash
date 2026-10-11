@@ -1,0 +1,1393 @@
+{
+  "version": "1",
+  "meta": {
+    "name": "WADA directory import"
+  },
+  "collections": [
+    {
+      "slug": "venues",
+      "label": "Venues",
+      "labelSingular": "Venue",
+      "titleField": "name",
+      "group": "WADA",
+      "sortOrder": 0,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true,
+          "indexed": true
+        },
+        {
+          "slug": "address",
+          "label": "Street address",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "phone",
+          "label": "Public venue phone",
+          "type": "string"
+        }
+      ],
+      "commentsEnabled": false,
+      "urlPattern": "/venues/"
+    },
+    {
+      "slug": "teams",
+      "label": "Teams",
+      "labelSingular": "Team",
+      "titleField": "name",
+      "group": "WADA",
+      "sortOrder": 1,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true,
+          "indexed": true
+        },
+        {
+          "slug": "venue",
+          "label": "Home venue",
+          "type": "reference",
+          "validation": {
+            "targetCollection": "venues",
+            "multiple": false
+          }
+        },
+        {
+          "slug": "venue_note",
+          "label": "Venue note",
+          "type": "string"
+        },
+        {
+          "slug": "captain",
+          "label": "Captain name",
+          "type": "string"
+        },
+        {
+          "slug": "aliases",
+          "label": "Other team names",
+          "type": "repeater",
+          "validation": {
+            "subFields": [
+              {
+                "slug": "name",
+                "label": "Name",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        }
+      ],
+      "commentsEnabled": false,
+      "urlPattern": "/teams/"
+    },
+    {
+      "slug": "committee",
+      "label": "Committee",
+      "labelSingular": "Committee member",
+      "titleField": "name",
+      "group": "WADA",
+      "sortOrder": 2,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true,
+          "indexed": true
+        },
+        {
+          "slug": "role",
+          "label": "Role",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "term",
+          "label": "Term",
+          "type": "string"
+        },
+        {
+          "slug": "photo",
+          "label": "Portrait",
+          "type": "image"
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "defaultValue": 100,
+          "indexed": true
+        }
+      ],
+      "commentsEnabled": false,
+      "urlPattern": "/about/"
+    },
+    {
+      "slug": "sponsors",
+      "label": "Sponsors",
+      "labelSingular": "Sponsor",
+      "titleField": "name",
+      "group": "WADA",
+      "sortOrder": 3,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true,
+          "indexed": true
+        },
+        {
+          "slug": "tier",
+          "label": "Sponsorship tier",
+          "type": "select",
+          "required": true,
+          "validation": {
+            "options": [
+              "major",
+              "sponsor"
+            ]
+          }
+        },
+        {
+          "slug": "category",
+          "label": "Business category",
+          "type": "string"
+        },
+        {
+          "slug": "address",
+          "label": "Business address",
+          "type": "string"
+        },
+        {
+          "slug": "phone",
+          "label": "Public business phone",
+          "type": "string"
+        },
+        {
+          "slug": "url",
+          "label": "Website",
+          "type": "url"
+        },
+        {
+          "slug": "logo",
+          "label": "Logo",
+          "type": "image"
+        },
+        {
+          "slug": "content",
+          "label": "About the sponsor",
+          "type": "portableText"
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "defaultValue": 100,
+          "indexed": true
+        }
+      ],
+      "commentsEnabled": false,
+      "urlPattern": "/sponsors/"
+    },
+    {
+      "slug": "documents",
+      "label": "Documents",
+      "labelSingular": "Document",
+      "titleField": "title",
+      "group": "WADA",
+      "sortOrder": 4,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search"
+      ],
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "category",
+          "label": "Category",
+          "type": "select",
+          "required": true,
+          "validation": {
+            "options": [
+              "Rules",
+              "Governance",
+              "Policies",
+              "Results archive"
+            ]
+          }
+        },
+        {
+          "slug": "description",
+          "label": "Description",
+          "type": "text"
+        },
+        {
+          "slug": "file",
+          "label": "Uploaded document",
+          "type": "file",
+          "validation": {
+            "allowedMimeTypes": [
+              "application/pdf"
+            ]
+          }
+        },
+        {
+          "slug": "url",
+          "label": "Original document link",
+          "type": "url"
+        },
+        {
+          "slug": "featured",
+          "label": "Featured",
+          "type": "boolean",
+          "defaultValue": false
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "defaultValue": 100,
+          "indexed": true
+        }
+      ],
+      "commentsEnabled": false,
+      "urlPattern": "/documents/"
+    },
+    {
+      "slug": "memorials",
+      "label": "In memory",
+      "labelSingular": "Memorial",
+      "titleField": "name",
+      "group": "WADA",
+      "sortOrder": 5,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search"
+      ],
+      "fields": [
+        {
+          "slug": "name",
+          "label": "Name",
+          "type": "string",
+          "required": true,
+          "searchable": true,
+          "indexed": true
+        },
+        {
+          "slug": "died",
+          "label": "Date of passing (YYYY-MM-DD)",
+          "type": "string",
+          "validation": {
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          }
+        },
+        {
+          "slug": "tribute",
+          "label": "Tribute",
+          "type": "portableText"
+        },
+        {
+          "slug": "display_order",
+          "label": "Display order",
+          "type": "integer",
+          "defaultValue": 100,
+          "indexed": true
+        }
+      ],
+      "commentsEnabled": false,
+      "urlPattern": "/about/#in-memory"
+    },
+    {
+      "slug": "site_profile",
+      "label": "WADA site details",
+      "labelSingular": "Site details",
+      "titleField": "title",
+      "group": "WADA",
+      "sortOrder": 6,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search"
+      ],
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Association name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "short_name",
+          "label": "Short name",
+          "type": "string"
+        },
+        {
+          "slug": "headline",
+          "label": "Home headline",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "tagline",
+          "label": "Home introduction",
+          "type": "string"
+        },
+        {
+          "slug": "content",
+          "label": "Association history",
+          "type": "portableText"
+        },
+        {
+          "slug": "email",
+          "label": "Public association email",
+          "type": "string"
+        },
+        {
+          "slug": "facebook",
+          "label": "Facebook",
+          "type": "url"
+        },
+        {
+          "slug": "home_ground",
+          "label": "Home ground",
+          "type": "string"
+        },
+        {
+          "slug": "home_address",
+          "label": "Home ground address",
+          "type": "string"
+        },
+        {
+          "slug": "results_due",
+          "label": "Results deadline",
+          "type": "text"
+        },
+        {
+          "slug": "eligibility_notice",
+          "label": "Captains notice",
+          "type": "text"
+        }
+      ],
+      "commentsEnabled": false,
+      "urlPattern": "/"
+    }
+  ],
+  "content": {
+    "venues": [
+      {
+        "id": "venues:phos-camden-sports-club",
+        "slug": "phos-camden-sports-club",
+        "status": "published",
+        "data": {
+          "name": "Phos-Camden Sports Club",
+          "address": "Camden Oval, Anzac Highway, Novar Gardens",
+          "phone": "0433 770 860"
+        }
+      },
+      {
+        "id": "venues:seaton-park-rsl",
+        "slug": "seaton-park-rsl",
+        "status": "published",
+        "data": {
+          "name": "Seaton Park RSL",
+          "address": "255 Tapleys Hill Road, Seaton SA 5023",
+          "phone": "8243 0535"
+        }
+      },
+      {
+        "id": "venues:wee-willies-tavern",
+        "slug": "wee-willies-tavern",
+        "status": "published",
+        "data": {
+          "name": "Wee Willies Tavern",
+          "address": "565 Military Road, Largs North",
+          "phone": "8248 2297"
+        }
+      },
+      {
+        "id": "venues:woodville-south-sports-club",
+        "slug": "woodville-south-sports-club",
+        "status": "published",
+        "data": {
+          "name": "Woodville South Sports & Community Club",
+          "address": "108 Ledger Road, Woodville South",
+          "phone": "8268 7850"
+        }
+      }
+    ],
+    "teams": [
+      {
+        "id": "teams:allnighters",
+        "slug": "allnighters",
+        "status": "published",
+        "data": {
+          "name": "Allnighters",
+          "aliases": [
+            {
+              "name": "All-Nighters"
+            },
+            {
+              "name": "All Nighters"
+            }
+          ],
+          "venue": "$ref:venues:phos-camden-sports-club",
+          "captain": "Scott Carrigan"
+        }
+      },
+      {
+        "id": "teams:beach-boys",
+        "slug": "beach-boys",
+        "status": "published",
+        "data": {
+          "name": "Beach Boys",
+          "aliases": []
+        }
+      },
+      {
+        "id": "teams:bobs-chicks",
+        "slug": "bobs-chicks",
+        "status": "published",
+        "data": {
+          "name": "Bob's Chicks",
+          "aliases": []
+        }
+      },
+      {
+        "id": "teams:catters",
+        "slug": "catters",
+        "status": "published",
+        "data": {
+          "name": "Catters",
+          "aliases": []
+        }
+      },
+      {
+        "id": "teams:dart-stormers",
+        "slug": "dart-stormers",
+        "status": "published",
+        "data": {
+          "name": "Dart Stormers",
+          "aliases": []
+        }
+      },
+      {
+        "id": "teams:dart-vaders",
+        "slug": "dart-vaders",
+        "status": "published",
+        "data": {
+          "name": "Dart Vaders",
+          "aliases": [],
+          "venue": "$ref:venues:seaton-park-rsl",
+          "captain": "Peter Russo"
+        }
+      },
+      {
+        "id": "teams:darty-rotten-scoundrels",
+        "slug": "darty-rotten-scoundrels",
+        "status": "published",
+        "data": {
+          "name": "Darty Rotten Scoundrels",
+          "aliases": [
+            {
+              "name": "Darty Rotten Scounfrels"
+            }
+          ]
+        }
+      },
+      {
+        "id": "teams:drifters",
+        "slug": "drifters",
+        "status": "published",
+        "data": {
+          "name": "Drifters",
+          "aliases": [
+            {
+              "name": "Fitzroy Drifters"
+            }
+          ]
+        }
+      },
+      {
+        "id": "teams:findon-ratpack",
+        "slug": "findon-ratpack",
+        "status": "published",
+        "data": {
+          "name": "Findon Ratpack",
+          "aliases": [
+            {
+              "name": "Findon RatPack"
+            }
+          ]
+        }
+      },
+      {
+        "id": "teams:full-of-bull",
+        "slug": "full-of-bull",
+        "status": "published",
+        "data": {
+          "name": "Full of Bull",
+          "aliases": []
+        }
+      },
+      {
+        "id": "teams:hellraisers",
+        "slug": "hellraisers",
+        "status": "published",
+        "data": {
+          "name": "RSL Hellraisers",
+          "aliases": [
+            {
+              "name": "Hellraisers"
+            }
+          ],
+          "venue": "$ref:venues:seaton-park-rsl",
+          "captain": "Bryan Kennedy",
+          "venue_note": "BBQ Room"
+        }
+      },
+      {
+        "id": "teams:henley-sharks",
+        "slug": "henley-sharks",
+        "status": "published",
+        "data": {
+          "name": "Henley Sharks",
+          "aliases": []
+        }
+      },
+      {
+        "id": "teams:heres-hope-inn",
+        "slug": "heres-hope-inn",
+        "status": "published",
+        "data": {
+          "name": "Here's Hope Inn",
+          "aliases": []
+        }
+      },
+      {
+        "id": "teams:jugernauts",
+        "slug": "jugernauts",
+        "status": "published",
+        "data": {
+          "name": "Jugernauts",
+          "aliases": [
+            {
+              "name": "Juggernauts"
+            }
+          ]
+        }
+      },
+      {
+        "id": "teams:live-by-the-dart",
+        "slug": "live-by-the-dart",
+        "status": "published",
+        "data": {
+          "name": "Live by the Dart",
+          "aliases": [
+            {
+              "name": "LBTD"
+            }
+          ],
+          "venue": "$ref:venues:seaton-park-rsl",
+          "captain": "Paul Linke"
+        }
+      },
+      {
+        "id": "teams:project-zeus",
+        "slug": "project-zeus",
+        "status": "published",
+        "data": {
+          "name": "Project Zeus",
+          "aliases": []
+        }
+      },
+      {
+        "id": "teams:rsl-dart-diggers",
+        "slug": "rsl-dart-diggers",
+        "status": "published",
+        "data": {
+          "name": "RSL Dart Diggers",
+          "aliases": []
+        }
+      },
+      {
+        "id": "teams:rsl-gunners",
+        "slug": "rsl-gunners",
+        "status": "published",
+        "data": {
+          "name": "RSL Gunners",
+          "aliases": [
+            {
+              "name": "Gunners"
+            }
+          ]
+        }
+      },
+      {
+        "id": "teams:rsl-no-darts",
+        "slug": "rsl-no-darts",
+        "status": "published",
+        "data": {
+          "name": "RSL No Darts",
+          "aliases": []
+        }
+      },
+      {
+        "id": "teams:rsl-no-rules",
+        "slug": "rsl-no-rules",
+        "status": "published",
+        "data": {
+          "name": "RSL No Rules",
+          "aliases": []
+        }
+      },
+      {
+        "id": "teams:saca-cats",
+        "slug": "saca-cats",
+        "status": "published",
+        "data": {
+          "name": "SACA Cats",
+          "aliases": [],
+          "venue": "$ref:venues:woodville-south-sports-club",
+          "captain": "William Hunt"
+        }
+      },
+      {
+        "id": "teams:the-26ers",
+        "slug": "the-26ers",
+        "status": "published",
+        "data": {
+          "name": "The 26er's",
+          "aliases": [
+            {
+              "name": "26ers"
+            }
+          ]
+        }
+      },
+      {
+        "id": "teams:wee-willies",
+        "slug": "wee-willies",
+        "status": "published",
+        "data": {
+          "name": "Wee Willies",
+          "aliases": [],
+          "venue": "$ref:venues:wee-willies-tavern",
+          "captain": "Ron Jensen"
+        }
+      },
+      {
+        "id": "teams:west-lakes-wizards",
+        "slug": "west-lakes-wizards",
+        "status": "published",
+        "data": {
+          "name": "West-Lakes Wizards",
+          "aliases": [
+            {
+              "name": "Wizards"
+            },
+            {
+              "name": "West Lakes Wizards"
+            }
+          ]
+        }
+      }
+    ],
+    "committee": [
+      {
+        "id": "committee:match-secretary",
+        "slug": "match-secretary",
+        "status": "published",
+        "data": {
+          "name": "Kevin McMahon",
+          "role": "Match Secretary",
+          "term": "2025–26",
+          "display_order": 3
+        }
+      },
+      {
+        "id": "committee:president",
+        "slug": "president",
+        "status": "published",
+        "data": {
+          "name": "Christopher Lennon",
+          "role": "President",
+          "term": "2025–26",
+          "display_order": 1
+        }
+      },
+      {
+        "id": "committee:secretary",
+        "slug": "secretary",
+        "status": "published",
+        "data": {
+          "name": "Adrian Bickle",
+          "role": "Secretary",
+          "term": "2025–26",
+          "display_order": 2
+        }
+      },
+      {
+        "id": "committee:treasurer",
+        "slug": "treasurer",
+        "status": "published",
+        "data": {
+          "name": "Liz Jenkins",
+          "role": "Treasurer",
+          "term": "2025–26",
+          "display_order": 4
+        }
+      }
+    ],
+    "sponsors": [
+      {
+        "id": "sponsors:fixall-mechanical",
+        "slug": "fixall-mechanical",
+        "status": "published",
+        "data": {
+          "name": "Fixall Mechanical",
+          "tier": "sponsor",
+          "category": "Auto crash & mechanical repairs",
+          "address": "197 Military Road, Semaphore",
+          "phone": "8242 5111",
+          "display_order": 5
+        }
+      },
+      {
+        "id": "sponsors:ideal-furniture",
+        "slug": "ideal-furniture",
+        "status": "published",
+        "data": {
+          "name": "Ideal Furniture",
+          "tier": "sponsor",
+          "category": "Custom-built furniture",
+          "phone": "8345 5228",
+          "display_order": 9
+        }
+      },
+      {
+        "id": "sponsors:jonix-hair",
+        "slug": "jonix-hair",
+        "status": "published",
+        "data": {
+          "name": "Jonix Hair",
+          "tier": "sponsor",
+          "category": "Hairdresser",
+          "address": "Shop 7 Port Mall, 176 St Vincent Street, Port Adelaide",
+          "phone": "8341 1670",
+          "display_order": 8
+        }
+      },
+      {
+        "id": "sponsors:mighty-toys",
+        "slug": "mighty-toys",
+        "status": "published",
+        "data": {
+          "name": "Mighty Toys",
+          "tier": "sponsor",
+          "category": "Tyres",
+          "address": "779B Port Road, Woodville",
+          "url": "http://www.mightytoys.com.au",
+          "display_order": 10
+        }
+      },
+      {
+        "id": "sponsors:newspower-port-mall",
+        "slug": "newspower-port-mall",
+        "status": "published",
+        "data": {
+          "name": "Newspower Port Mall",
+          "tier": "sponsor",
+          "category": "Newsagent",
+          "address": "Shop 1–2 Port Mall Shopping Centre, 178 St Vincent Street, Port Adelaide",
+          "phone": "8447 2961",
+          "url": "https://www.facebook.com/portmallnewsagency/",
+          "display_order": 7
+        }
+      },
+      {
+        "id": "sponsors:port-locksmith",
+        "slug": "port-locksmith",
+        "status": "published",
+        "data": {
+          "name": "Port Locksmith",
+          "tier": "sponsor",
+          "category": "Locksmith",
+          "address": "156 Swan Terrace, Glanville",
+          "phone": "8242 3334",
+          "url": "http://www.portlocksmiths.com.au/",
+          "display_order": 6
+        }
+      },
+      {
+        "id": "sponsors:seaton-rsl",
+        "slug": "seaton-rsl",
+        "status": "published",
+        "data": {
+          "name": "Seaton RSL",
+          "tier": "sponsor",
+          "category": "Club",
+          "address": "255 Tapleys Hill Road, Seaton 5023",
+          "phone": "8340 2854",
+          "display_order": 2
+        }
+      },
+      {
+        "id": "sponsors:shannahan-crash-repairs",
+        "slug": "shannahan-crash-repairs",
+        "status": "published",
+        "data": {
+          "name": "Shannahan Crash Repairs",
+          "tier": "sponsor",
+          "category": "Crash repairs (RAA approved)",
+          "address": "243 Port Road, Queenstown",
+          "phone": "8447 2340",
+          "url": "https://www.shannahancrash.com.au/",
+          "display_order": 4
+        }
+      },
+      {
+        "id": "sponsors:swiftflyte",
+        "slug": "swiftflyte",
+        "status": "published",
+        "data": {
+          "name": "Swiftflyte (Aust) Pty Ltd",
+          "tier": "sponsor",
+          "category": "Dart supplies",
+          "address": "Unit 24, 16–28 Research Road, Pooraka SA 5095",
+          "phone": "8262 7165",
+          "url": "https://www.swiftflyte.com.au/",
+          "display_order": 3
+        }
+      },
+      {
+        "id": "sponsors:tony-monte-funerals",
+        "slug": "tony-monte-funerals",
+        "status": "published",
+        "data": {
+          "name": "Tony Monte Funerals",
+          "tier": "major",
+          "category": "Funeral directors",
+          "address": "1 Webb Street, Port Adelaide",
+          "phone": "8341 2822",
+          "url": "https://tonymontefunerals.com.au/",
+          "display_order": 1
+        }
+      }
+    ],
+    "documents": [
+      {
+        "id": "documents:agm-2026-notice",
+        "slug": "agm-2026-notice",
+        "status": "published",
+        "data": {
+          "title": "2026 AGM Notice and Nomination Form",
+          "category": "Governance",
+          "description": "Annual General Meeting.",
+          "url": "https://www.wadaonline.com/_files/ugd/d7e43b_1d422368b03d47c8b15ee89c4a142043.pdf",
+          "featured": true,
+          "display_order": 1
+        }
+      },
+      {
+        "id": "documents:championships-2026",
+        "slug": "championships-2026",
+        "status": "published",
+        "data": {
+          "title": "WADA 2026 Singles & Doubles Championships",
+          "category": "Results archive",
+          "url": "https://www.wadaonline.com/_files/ugd/d7e43b_08471300970448ba9741e2379b85b45f.pdf",
+          "display_order": 5
+        }
+      },
+      {
+        "id": "documents:constitution-2014",
+        "slug": "constitution-2014",
+        "status": "published",
+        "data": {
+          "title": "WADA Constitution (2014)",
+          "category": "Governance",
+          "description": "Rules of the incorporated association.",
+          "url": "https://uploads.documents.cimpress.io/v1/uploads/00996e65-a761-4f08-ba9e-de90ea37b3f9~110/original?tenant=vbu-digital",
+          "display_order": 2
+        }
+      },
+      {
+        "id": "documents:ladder-2026-winter-r10",
+        "slug": "ladder-2026-winter-r10",
+        "status": "published",
+        "data": {
+          "title": "Weekly ladder — Winter 2026 Round 10",
+          "category": "Results archive",
+          "url": "https://www.wadaonline.com/_files/ugd/d7e43b_40540935570f40b580c3c5ea65cc1ba6.pdf",
+          "display_order": 2
+        }
+      },
+      {
+        "id": "documents:life-member-nomination",
+        "slug": "life-member-nomination",
+        "status": "published",
+        "data": {
+          "title": "Life Member Nomination Form",
+          "category": "Governance",
+          "description": "Recognising long service.",
+          "url": "https://www.wadaonline.com/_files/ugd/d7e43b_e6da367575b34935a916c25774fe99cb.pdf",
+          "display_order": 4
+        }
+      },
+      {
+        "id": "documents:lifetime-180s",
+        "slug": "lifetime-180s",
+        "status": "published",
+        "data": {
+          "title": "Recorded lifetime 180's",
+          "category": "Results archive",
+          "url": "https://www.wadaonline.com/_files/ugd/d7e43b_2b12b1c3e1c643df9f5cc0eb83033f0e.pdf",
+          "display_order": 4
+        }
+      },
+      {
+        "id": "documents:media-policy-2024",
+        "slug": "media-policy-2024",
+        "status": "published",
+        "data": {
+          "title": "Media Policy",
+          "category": "Policies",
+          "description": "November 2024.",
+          "url": "https://www.wadaonline.com/_files/ugd/d7e43b_5b4511cb30c140019127f8297c0e0217.pdf",
+          "display_order": 1
+        }
+      },
+      {
+        "id": "documents:proxy-form",
+        "slug": "proxy-form",
+        "status": "published",
+        "data": {
+          "title": "Appointment of Proxy Form",
+          "category": "Governance",
+          "description": "For voting at general meetings.",
+          "url": "https://uploads.documents.cimpress.io/v1/uploads/bd61133b-c151-4dd8-bced-e524e99ad8c5~110/original?tenant=vbu-digital",
+          "display_order": 3
+        }
+      },
+      {
+        "id": "documents:results-2026-winter-r10",
+        "slug": "results-2026-winter-r10",
+        "status": "published",
+        "data": {
+          "title": "Weekly results — Winter 2026 Round 10",
+          "category": "Results archive",
+          "url": "https://www.wadaonline.com/_files/ugd/d7e43b_dc98b1d93607478e92a048d07af228ae.pdf",
+          "display_order": 1
+        }
+      },
+      {
+        "id": "documents:rule-book-2026",
+        "slug": "rule-book-2026",
+        "status": "published",
+        "data": {
+          "title": "WADA Official Rule Book 2026",
+          "category": "Rules",
+          "description": "Playing rules, eligibility and penalties.",
+          "url": "https://www.wadaonline.com/_files/ugd/d7e43b_b2341daab1124f8d8671b243f0d84906.pdf",
+          "featured": true,
+          "display_order": 1
+        }
+      },
+      {
+        "id": "documents:stats-2026-winter-r10",
+        "slug": "stats-2026-winter-r10",
+        "status": "published",
+        "data": {
+          "title": "Divisional player statistics — Round 10",
+          "category": "Results archive",
+          "url": "https://www.wadaonline.com/_files/ugd/d7e43b_b6aede82d3ff4783800851e63fc12232.pdf",
+          "display_order": 3
+        }
+      }
+    ],
+    "memorials": [
+      {
+        "id": "memorials:alanreid",
+        "slug": "alanreid",
+        "status": "published",
+        "data": {
+          "name": "Alan Reid",
+          "display_order": 19
+        }
+      },
+      {
+        "id": "memorials:barb-jury",
+        "slug": "barb-jury",
+        "status": "published",
+        "data": {
+          "name": "Barb Jury",
+          "died": "2022-06-06",
+          "tribute": [
+            {
+              "_type": "block",
+              "_key": "paragraph-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "span-0",
+                  "text": "Long-standing team and committee member, captain of the Seaton Bums and Vice President of Seaton Park RSL.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "display_order": 3
+        }
+      },
+      {
+        "id": "memorials:barry-durham",
+        "slug": "barry-durham",
+        "status": "published",
+        "data": {
+          "name": "Barry Durham",
+          "died": "2017-08-19",
+          "tribute": [
+            {
+              "_type": "block",
+              "_key": "paragraph-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "span-0",
+                  "text": "Woodville South Sports Club member and long-serving dart player.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "display_order": 4
+        }
+      },
+      {
+        "id": "memorials:bernicewilson",
+        "slug": "bernicewilson",
+        "status": "published",
+        "data": {
+          "name": "Bernice Wilson",
+          "display_order": 17
+        }
+      },
+      {
+        "id": "memorials:bonnie",
+        "slug": "bonnie",
+        "status": "published",
+        "data": {
+          "name": "Bonnie",
+          "display_order": 18
+        }
+      },
+      {
+        "id": "memorials:colinlear",
+        "slug": "colinlear",
+        "status": "published",
+        "data": {
+          "name": "Colin Lear",
+          "display_order": 13
+        }
+      },
+      {
+        "id": "memorials:desmond-shepley",
+        "slug": "desmond-shepley",
+        "status": "published",
+        "data": {
+          "name": "Desmond Shepley",
+          "died": "2015-01-20",
+          "tribute": [
+            {
+              "_type": "block",
+              "_key": "paragraph-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "span-0",
+                  "text": "Founding committee member of WADA.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "display_order": 7
+        }
+      },
+      {
+        "id": "memorials:gayle-nielsen",
+        "slug": "gayle-nielsen",
+        "status": "published",
+        "data": {
+          "name": "Gayle Nielsen",
+          "died": "2022-08-14",
+          "tribute": [
+            {
+              "_type": "block",
+              "_key": "paragraph-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "span-0",
+                  "text": "Committee member and SA state team representative.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "display_order": 2
+        }
+      },
+      {
+        "id": "memorials:gregcook",
+        "slug": "gregcook",
+        "status": "published",
+        "data": {
+          "name": "Greg Cook",
+          "display_order": 11
+        }
+      },
+      {
+        "id": "memorials:heather-shepley",
+        "slug": "heather-shepley",
+        "status": "published",
+        "data": {
+          "name": "Heather Shepley",
+          "died": "2022-11-13",
+          "tribute": [
+            {
+              "_type": "block",
+              "_key": "paragraph-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "span-0",
+                  "text": "Founding member, known to many as “Feathers” because of her flights. Played for many years with her husband Des.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "display_order": 1
+        }
+      },
+      {
+        "id": "memorials:jennyroylance",
+        "slug": "jennyroylance",
+        "status": "published",
+        "data": {
+          "name": "Jenny Roylance",
+          "display_order": 14
+        }
+      },
+      {
+        "id": "memorials:jim-cowan",
+        "slug": "jim-cowan",
+        "status": "published",
+        "data": {
+          "name": "Jim Cowan",
+          "died": "2016-01-28",
+          "tribute": [
+            {
+              "_type": "block",
+              "_key": "paragraph-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "span-0",
+                  "text": "Long-standing committee member, Gunners Dart Team, West Lakes Football Club.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "display_order": 6
+        }
+      },
+      {
+        "id": "memorials:lindsaywyatt",
+        "slug": "lindsaywyatt",
+        "status": "published",
+        "data": {
+          "name": "Lindsay Wyatt",
+          "display_order": 15
+        }
+      },
+      {
+        "id": "memorials:midge-flowers",
+        "slug": "midge-flowers",
+        "status": "published",
+        "data": {
+          "name": "Midge Flowers",
+          "died": "2016-05-27",
+          "tribute": [
+            {
+              "_type": "block",
+              "_key": "paragraph-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "span-0",
+                  "text": "Founding committee member and WADA’s first Life Member. The Midge Flowers Cup is played in her memory.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "display_order": 5
+        }
+      },
+      {
+        "id": "memorials:philbarrett",
+        "slug": "philbarrett",
+        "status": "published",
+        "data": {
+          "name": "Phil Barrett",
+          "display_order": 12
+        }
+      },
+      {
+        "id": "memorials:robertwebb",
+        "slug": "robertwebb",
+        "status": "published",
+        "data": {
+          "name": "Robert Webb",
+          "display_order": 16
+        }
+      },
+      {
+        "id": "memorials:teresamillard",
+        "slug": "teresamillard",
+        "status": "published",
+        "data": {
+          "name": "Teresa Millard",
+          "display_order": 10
+        }
+      }
+    ],
+    "site_profile": [
+      {
+        "id": "site_profile:site",
+        "slug": "site",
+        "status": "published",
+        "data": {
+          "title": "Western Area Darts Association Inc.",
+          "short_name": "WADA",
+          "headline": "Every throw. Every team. Every Wednesday.",
+          "tagline": "Wednesday nights · Western suburbs · Since 1989",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "paragraph-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "span-0",
+                  "text": "WADA was formed to serve dart players in Adelaide's western suburbs, particularly the Port Adelaide region. It has always been a mixed competition, welcoming men and women in every team.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "paragraph-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "span-1",
+                  "text": "We began with 300 registered members playing on Monday and Wednesday nights. Today the main competition runs on Wednesdays, with satellite league nights on alternate Fridays.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "paragraph-2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "span-2",
+                  "text": "In 2022 WADA adopted its current logo, designed by sponsor Paul Meehan. It appears on the trophies, medals and premiership shields made and donated by Life Member Charlie Caruana.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "email": "wadadarts89@gmail.com",
+          "facebook": "https://facebook.com/pages/Western-Area-Darts/251734721505204",
+          "home_ground": "Seaton Park RSL",
+          "home_address": "255 Tapleys Hill Road, Seaton SA 5023",
+          "results_due": "All results to the Match Secretary by 6.00pm Thursday each week.",
+          "eligibility_notice": "Players who are registered in and play three (3) games in a team must remain in that team. They may play in a higher division for a maximum of two (2) games. Loss of points will be taken if this is not observed — captains, please check the Rule Book."
+        }
+      }
+    ]
+  }
+}

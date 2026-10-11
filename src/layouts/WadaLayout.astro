@@ -1,0 +1,9 @@
+---
+import Base from './Base.astro';
+import '../styles/wada.css';
+interface Props { title: string; description?: string; }
+const { title, description } = Astro.props;
+---
+<Base title={title} description={description}>
+  <div class="wada"><slot /></div>
+</Base>

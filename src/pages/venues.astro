@@ -1,0 +1,8 @@
+---
+import WadaLayout from '../layouts/WadaLayout.astro';
+import DirectoryCard from '../components/wada/DirectoryCard.astro';
+import { getWadaCollection } from '../lib/wada';
+const result = await getWadaCollection('venues');
+if (Astro.cache?.enabled) for (const hint of result.cacheHints) Astro.cache.set(hint);
+---
+<WadaLayout title="Venues"><header class="wada-heading"><p class="wada-kicker">Where we play</p><h1>Venues</h1></header><div class="wada-grid wada-section">{result.entries.sort((a,b) => a.data.name.localeCompare(b.data.name)).map(venue => <DirectoryCard title={venue.data.name}><p {...venue.edit.address}>{venue.data.address}</p>{venue.data.phone && <p>Venue phone: {venue.data.phone}</p>}<a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venue.data.name + ', ' + venue.data.address)}`}>Directions →</a></DirectoryCard>)}</div></WadaLayout>

@@ -1,0 +1,28 @@
+---
+import { Image } from 'emdash/ui';
+import WadaLayout from '../layouts/WadaLayout.astro';
+import { getWadaProfile, getWadaCollection } from '../lib/wada';
+const [profile, venues, sponsors] = await Promise.all([getWadaProfile(), getWadaCollection('venues'), getWadaCollection('sponsors')]);
+if (Astro.cache?.enabled) for (const hint of [profile.cacheHint, ...venues.cacheHints, ...sponsors.cacheHints]) Astro.cache.set(hint);
+const site = profile.entry;
+const supporters = sponsors.entries.sort((a, b) => (a.data.display_order ?? 100) - (b.data.display_order ?? 100));
+---
+<WadaLayout title={site?.data.title ?? 'WADA'} description={site?.data.tagline}>
+  {site && <>
+    <section class="wada-hero">
+      <p class="wada-kicker" {...site.edit.tagline}>{site.data.tagline}</p>
+      <h1 {...site.edit.headline}>{site.data.headline}</h1>
+      <p class="wada-lead">{site.data.title}</p>
+      <div class="wada-actions"><a class="wada-button" href="/teams/">Find my team</a><a href="/about/#contact">Start a new team →</a></div>
+    </section>
+    <section class="wada-section">
+      <div class="wada-section-heading"><h2>Where we play</h2><a href="/venues/">All venues →</a></div>
+      <div class="wada-grid">{venues.entries.map(venue => <article class="wada-card"><h3 {...venue.edit.name}>{venue.data.name}</h3><p {...venue.edit.address}>{venue.data.address}</p></article>)}</div>
+    </section>
+    <section class="wada-section">
+      <div class="wada-section-heading"><h2>Thank you to our sponsors</h2><a href="/sponsors/">Sponsor directory →</a></div>
+      <div class="wada-grid">{supporters.map(sponsor => <article class="wada-card">{sponsor.data.logo && <Image image={sponsor.data.logo} />}<p class="wada-kicker">{sponsor.data.tier === 'major' ? 'Major sponsor' : sponsor.data.category}</p><h3 {...sponsor.edit.name}>{sponsor.data.name}</h3></article>)}</div>
+    </section>
+    <section class="wada-section wada-contact"><h2>Join WADA</h2><p>{site.data.home_ground} · {site.data.home_address}</p><a href={`mailto:${site.data.email}`}>{site.data.email}</a></section>
+  </>}
+</WadaLayout>

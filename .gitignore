@@ -1,0 +1,33 @@
+node_modules
+dist
+.astro
+.emdash/migrations.json
+uploads
+data.db
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Local migration backups and SQLite journals
+backups/
+data.db-shm
+data.db-wal
+
+# Editor and operating-system state
+.idea/
+.DS_Store
+
+# Local Cloudflare bindings and state
+.dev.vars
+.dev.vars.*
+.wrangler/
+
+# Local databases and debug logs
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+npm-debug.log*

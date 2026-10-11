@@ -1,0 +1,74 @@
+{
+  "version": "1",
+  "settings": {
+    "title": "WADA",
+    "tagline": "Wednesday nights \u00b7 Western suburbs \u00b7 Since 1989",
+    "timezone": "Australia/Adelaide"
+  },
+  "menus": [
+    {
+      "name": "primary",
+      "label": "Primary navigation",
+      "items": [
+        {
+          "type": "custom",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "type": "custom",
+          "label": "Teams",
+          "url": "/teams/"
+        },
+        {
+          "type": "custom",
+          "label": "Venues",
+          "url": "/venues/"
+        },
+        {
+          "type": "custom",
+          "label": "Documents",
+          "url": "/documents/"
+        },
+        {
+          "type": "custom",
+          "label": "Sponsors",
+          "url": "/sponsors/"
+        },
+        {
+          "type": "custom",
+          "label": "About",
+          "url": "/about/"
+        }
+      ]
+    }
+  ],
+  "widgetAreas": [
+    {
+      "name": "footer",
+      "label": "Footer",
+      "widgets": [
+        {
+          "type": "content",
+          "title": "WADA",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "footer-about",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "footer-text",
+                  "text": "WADA was formed to serve dart players in Adelaide's western suburbs, particularly the Port Adelaide region.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
